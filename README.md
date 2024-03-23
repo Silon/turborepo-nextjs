@@ -29,3 +29,7 @@ To start using this template, you can use one of the following methods:
 
 - Select "Use this template" on GitHub repository page
 - Clone this repository
+
+## Documentation
+
+Web App Documentation: [README.md](apps/web/docs/index.md)
