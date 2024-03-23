@@ -1,0 +1,10 @@
+import { useContext } from 'react';
+import { {{pascalCase name}} } from './{{pascalCase name}}.context';
+
+export function use{{pascalCase name}}() {
+  const context = useContext({{pascalCase name}});
+  if (context === undefined) {
+    throw new Error('use{{pascalCase name}} must be used within a {{pascalCase name}}Provider');
+  }
+  return context;
+}

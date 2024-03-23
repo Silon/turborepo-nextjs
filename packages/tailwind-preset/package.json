@@ -1,0 +1,11 @@
+{
+  "name": "@repo/tailwind-preset",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "base.js"
+  ],
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

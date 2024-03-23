@@ -1,0 +1,13 @@
+import { ArContextAction, ArContextActionWithPayload } from 'types';
+
+export type {{pascalCase name}}StateType = {
+  count: number;
+};
+
+export type {{pascalCase name}}ActionsType = {
+  increment: () => void;
+  set: (count: number) => void;
+  customAction: (payload: number) => void;
+};
+
+export type {{pascalCase name}}Action = ArContextAction<'increment'> | ArContextActionWithPayload<'set', number>;

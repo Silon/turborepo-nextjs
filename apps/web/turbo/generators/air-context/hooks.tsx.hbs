@@ -1,0 +1,18 @@
+import { useContext } from 'react';
+import { {{pascalCase name}}Actions, {{pascalCase name}}State } from './{{pascalCase name}}.context';
+
+export function use{{pascalCase name}}State() {
+  const context = useContext({{pascalCase name}}State);
+  if (context === undefined) {
+    throw new Error('use{{pascalCase name}}State must be used within a {{pascalCase name}}Provider');
+  }
+  return context;
+}
+
+export function use{{pascalCase name}}Actions() {
+  const context = useContext({{pascalCase name}}Actions);
+  if (context === undefined) {
+    throw new Error('use{{pascalCase name}}Actions must be used within a {{pascalCase name}}Provider');
+  }
+  return context;
+}

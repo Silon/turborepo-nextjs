@@ -1,0 +1,24 @@
+import { type HTMLProps } from "react";
+import { VariantProps, tv } from "tailwind-variants";
+
+type {{pascalCase name}}Variants = VariantProps<typeof {{camelCase name}}>;
+
+export type {{pascalCase name}}Props = HTMLProps<HTMLDivElement> & {{pascalCase name}}Variants;
+
+const {{camelCase name}} = tv({
+  base: "flex",
+  variants: {
+    theme: {
+      base: "px-1 py-1",
+      primary: "bg-ar-primary",
+    },
+  },
+});
+
+export function {{pascalCase name}}({ className, theme = "base" }: {{pascalCase name}}Props) {
+  return (
+    <div className={ {{camelCase name}}({ theme, className })}>
+      <h1>{{pascalCase name}} Component</h1>
+    </div>
+  );
+}

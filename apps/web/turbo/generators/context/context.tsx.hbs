@@ -1,0 +1,43 @@
+import { createContext, useMemo, useState } from 'react';
+
+export type {{pascalCase name}}Type = {
+  count: number;
+  setCount: (count: number) => void;
+};
+
+/**
+ * Initial state
+ *
+ * This is used to initialize the state of the context.
+ */
+const INITIAL_STATE: {{pascalCase name}}Type = {
+  count: 0,
+  setCount: () => {},
+};
+
+/**
+ * Context
+ *
+ * This is the context that is used to store the state and the dispatcher.
+ */
+export const {{pascalCase name}} = createContext<{{pascalCase name}}Type>(INITIAL_STATE);
+
+export function {{pascalCase name}}Provider({
+  children,
+  initialState = INITIAL_STATE,
+}: {
+  children: React.ReactNode;
+  initialState: {{pascalCase name}}Type;
+}) {
+  const [count, setCount] = useState(initialState.count);
+
+  const value = useMemo(
+    (): {{pascalCase name}}Type => ({
+      count,
+      setCount,
+    }),
+    [count, setCount],
+  );
+
+  return <{{pascalCase name}}.Provider value={value}>{children}</{{pascalCase name}}.Provider>;
+}

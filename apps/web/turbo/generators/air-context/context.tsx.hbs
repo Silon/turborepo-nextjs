@@ -1,0 +1,86 @@
+import { createContext, useMemo, useReducer } from 'react';
+import { {{pascalCase name}}ActionsType, {{pascalCase name}}StateType } from './{{pascalCase name}}.types';
+import { {{camelCase name}}Reducer } from './{{pascalCase name}}.reducer';
+
+/**
+ *
+ * Separated into two contexts to avoid unnecessary re-renders
+ * when only one of the contexts changes.
+ *
+ * See: https://kentcdodds.com/blog/how-to-optimize-your-context-value
+ */
+export const {{pascalCase name}}State = createContext<{{pascalCase name}}StateType>({} as {{pascalCase name}}StateType);
+export const {{pascalCase name}}Actions = createContext<{{pascalCase name}}ActionsType>({} as {{pascalCase name}}ActionsType);
+
+/**
+ * Initial state
+ *
+ * This is used to initialize the state of the context.
+ */
+const INITIAL_STATE = {
+  count: 0,
+};
+
+/**
+ *
+ * {{pascalCase name}}Provider
+ *
+ * This is the provider for the {{pascalCase name}}.
+ */
+export function {{pascalCase name}}Provider({
+  children,
+  initialState = INITIAL_STATE,
+}: {
+  children: React.ReactNode;
+  initialState: {{pascalCase name}}StateType;
+}) {
+  /**
+   * useReducer
+   *
+   * Context state reducer
+   */
+  const [state, dispatch] = useReducer({{camelCase name}}Reducer, {
+    ...initialState,
+  });
+
+  /**
+   *
+   * customAction
+   *
+   * This is an example of a custom action.
+   */
+  const customAction = async (payload: number) => {
+    dispatch({ type: 'set', payload });
+    await new Promise((resolve) => {
+      setTimeout(resolve, 1000);
+    });
+    dispatch({ type: 'increment' });
+  };
+
+  /**
+   *
+   * actionsValue
+   *
+   * This is the value of the actions context.
+   */
+  const actionsValue = useMemo(
+    (): {{pascalCase name}}ActionsType => ({
+      increment: () => dispatch({ type: 'increment' }),
+      set: (payload: number) => dispatch({ type: 'set', payload }),
+      customAction,
+    }),
+    [],
+  );
+
+  /**
+   *
+   * This is the value of the state context.
+   *
+   * See: https://kentcdodds.com/blog/how-to-optimize-your-context-value
+   */
+  return (
+    <{{pascalCase name}}State.Provider value={state}>
+      <{{pascalCase name}}Actions.Provider value={actionsValue}>{children}</{{pascalCase name}}Actions.Provider>
+    </{{pascalCase name}}State.Provider>
+  );
+}

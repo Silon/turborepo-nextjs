@@ -1,0 +1,2 @@
+pnpm pre-commit
+exit 1
