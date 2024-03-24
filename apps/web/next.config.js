@@ -1,4 +1,5 @@
 const withAppEnvs = require('./scripts/withAppEnvs');
+const withSvgLoader = require('./scripts/withSvgLoader');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
@@ -8,6 +9,7 @@ const compose = (...fns) => (arg) => fns.reduce((composed, f) => f(composed), ar
 /** @type {import('next').NextConfig} */
 module.exports = compose(
   withAppEnvs,
+  withSvgLoader,
   withBundleAnalyzer,
 )({
   reactStrictMode: true,

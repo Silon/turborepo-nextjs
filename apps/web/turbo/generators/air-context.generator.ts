@@ -2,7 +2,7 @@ import type { PlopTypes } from "@turbo/gen";
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
   plop.setGenerator("air-context", {
-    description: "Air Context (complex state management)",
+    description: "crete new context (complex state management)",
     prompts: [
       {
         type: "input",

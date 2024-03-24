@@ -2,7 +2,7 @@ import type { PlopTypes } from "@turbo/gen";
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
   plop.setGenerator("component", {
-    description: "React Component",
+    description: "create new component",
     prompts: [
       {
         type: "input",

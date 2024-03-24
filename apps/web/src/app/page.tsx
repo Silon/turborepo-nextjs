@@ -1,10 +1,4 @@
-import { ArButton } from "@repo/ui/ArButton";
+import { ArHomePage, metadata } from "components/pages/ArHomePage";
 
-export default function Page(): JSX.Element {
-  return (
-    <main>
-      Hello World
-      <ArButton />
-    </main>
-  );
-}
+export { metadata };
+export default ArHomePage;

@@ -12,7 +12,7 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^19.1.0",
     "@repo/eslint-config": "workspace:*",
-    "@repo/tailwind-preset": "workspace:*",
+    "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^9.0.11",

@@ -1,0 +1,16 @@
+import React from 'react';
+import type { Metadata } from "next";
+
+type Props = {
+  children: React.ReactNode;
+};
+
+export const metadata: Metadata = {
+  title: "{{titleCase name}}",
+  description: "{{titleCase name}} Description",
+};
+
+export function {{pascalCase name}}(props: Props) {
+  console.log('{{pascalCase name}} props:', props)
+  return <div className="container">{{pascalCase name}}</div>
+};
