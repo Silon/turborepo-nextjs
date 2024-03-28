@@ -1,6 +1,11 @@
 {
   "name": "nextjs-turborepo",
   "private": true,
+  "version": "0.0.1",
+  "author": {
+    "name": "Damian Nowakowski",
+    "email": "silon.damian@gmail.com"
+  },
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
