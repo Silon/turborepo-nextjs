@@ -12,10 +12,10 @@
     "next-env.d.ts",
     "environment.d.ts",
     "next.config.js",
-    "**/*.js",
-    "**/*.ts",
-    "**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".next", ".turbo", "turbo", "scripts", "public", "env", "docs"]
 }

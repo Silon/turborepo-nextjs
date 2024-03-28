@@ -8,6 +8,7 @@
     "postbuild": "pnpm run sitemap",
     "sitemap": "next-sitemap",
     "preview": "npm run build && npm run start",
+    "lint": "./tasks/lint.sh",
     "dev": "./tasks/run.sh dev development",
     "build:development": "./tasks/run.sh build development",
     "start:development": "./tasks/run.sh start development",
@@ -23,7 +24,6 @@
     "start:production": "./tasks/run.sh start production",
     "preview:production": "./tasks/run.sh preview production",
     "analyze:production": "./tasks/run.sh analyze production",
-    "lint": "eslint . --max-warnings 0",
     "generate": "turbo gen --config ./turbo/generators/plopfile.ts"
   },
   "dependencies": {

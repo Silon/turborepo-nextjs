@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Ar Home Page Description",
 };
 
-export function ArHomePage(props: Props) {
+export function ArHomePage() {
   console.log("ArHomePage props:", props);
-  return <div className="container">ArHomePage</div>;
+  return <div className="container">Home Page</div>;
 }
