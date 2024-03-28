@@ -4,7 +4,7 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "lint": "turbo lint --",
+    "lint": "turbo lint --no-cache",
     "prepare": "husky",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
