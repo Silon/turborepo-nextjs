@@ -1,3 +1,4 @@
 module.exports = {
-  'src/**/*.{js,ts,tsx}': () => ['tsc --noEmit', 'eslint'],
+  "./apps/**/*.{js,ts,tsx}": () => ["tsc --noEmit", "eslint"],
+  "./packages/**/*.{js,ts,tsx}": () => ["tsc --noEmit", "eslint"],
 };

@@ -1,2 +1,1 @@
-pnpm pre-commit
-exit 1
+npm run pre-commit
