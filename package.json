@@ -11,13 +11,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "@commitlint/cz-commitlint",
-      "rules": {
-        "subject-empty": [
-          0,
-          "never"
-        ]
-      }
+      "path": "@commitlint/cz-commitlint"
     }
   },
   "devDependencies": {
