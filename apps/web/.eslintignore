@@ -1,0 +1,16 @@
+node_modules/
+target/
+.next/
+build/
+dist/
+scripts/
+turbo/
+tasks/
+public/
+env/
+.turbo/
+
+tailwind.config.js
+next-sitemap.config.js
+next.config.js
+postcss.config.js

@@ -2,6 +2,7 @@ import "styles/globals.css";
 
 import React from "react";
 import type { Metadata } from "next";
+import { ArAppContextProvider } from "contexts/ArAppContext";
 
 type Props = {
   children: React.ReactNode;
@@ -15,7 +16,9 @@ export const metadata: Metadata = {
 export function ArRootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ArAppContextProvider>{children}</ArAppContextProvider>
+      </body>
     </html>
   );
 }

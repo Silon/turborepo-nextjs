@@ -6,6 +6,8 @@ const project = resolve(process.cwd(), "tsconfig.json");
 module.exports = {
   extends: [
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/stylistic",
     "prettier",
     require.resolve("@vercel/style-guide/eslint/next"),
     "eslint-config-turbo",
@@ -18,7 +20,6 @@ module.exports = {
     node: true,
     browser: true,
   },
-  plugins: ["only-warn"],
   settings: {
     "import/resolver": {
       typescript: {
@@ -26,10 +27,9 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: [
-    // Ignore dotfiles
-    ".*.js",
-    "node_modules/",
-  ],
+  ignorePatterns: [".*.js", "node_modules/"],
   overrides: [{ files: ["*.js?(x)", "*.ts?(x)"] }],
+  rules: {
+    "@typescript-eslint/consistent-type-definitions": [0, "type"],
+  },
 };
