@@ -13,7 +13,6 @@
     TailwindCSS&nbsp;&nbsp;🪢&nbsp;&nbsp;
     Tailwind Variants&nbsp;&nbsp;🪢&nbsp;&nbsp;
     Framer Motion<br/>
-    Storybook&nbsp;&nbsp;🪢&nbsp;&nbsp;
     Next Sitemap&nbsp;&nbsp;🪢&nbsp;&nbsp;
     Bundle Analyzer&nbsp;&nbsp;🪢&nbsp;&nbsp;
     Plop Generator<br />

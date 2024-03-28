@@ -4,7 +4,8 @@
   "private": true,
   "exports": {
     "./UiButton": "./src/UiButton.tsx",
-    "./UiIcon": "./src/UiIcon.tsx"
+    "./UiIcon": "./src/UiIcon.tsx",
+    "./UiFormTextInput": "./src/UiFormTextInput.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",

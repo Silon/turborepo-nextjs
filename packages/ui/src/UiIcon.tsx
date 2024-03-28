@@ -1,7 +1,8 @@
+import { forwardRef } from "react";
 import { VariantProps, tv } from "tailwind-variants";
 
 type BasicIconProps = {
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement> & { title?: string }>;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   className?: string;
 };
 
@@ -22,13 +23,13 @@ const uiIcon = tv({
   base: "flex",
   variants: {
     theme: {
-      base: "px-1 py-1",
-      primary: "text-blue-400 px-4",
+      base: "",
+      primary: "text-primary",
     },
   },
 });
 
-export function UiIcon(props: UiIconProps) {
+export const UiIcon = forwardRef<SVGSVGElement, UiIconProps>((props, ref) => {
   const style: Record<string, string | number> = {
     width: "100%",
     height: "100%",
@@ -44,5 +45,7 @@ export function UiIcon(props: UiIconProps) {
 
   const IconComponent = props.icon;
 
-  return <IconComponent className={uiIcon({ theme: props.theme, className: props.className })} style={style} />;
-}
+  return (
+    <IconComponent ref={ref} className={uiIcon({ theme: props.theme, className: props.className })} style={style} />
+  );
+});
