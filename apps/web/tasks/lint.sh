@@ -25,11 +25,3 @@ if [ $tsc_exit_code -ne 0 ]
   else
     echo "${GREEN} ✔ Typescript${NC}"
 fi
-
-if [ $linter_exit_code != 0 && $tsc_exit_code != 0 ]
-  then
-    exit 1
-  else
-  echo "... Why?"
-    exit 0
-fi
