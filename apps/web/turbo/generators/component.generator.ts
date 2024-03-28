@@ -29,12 +29,6 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           "module",
         ],
       },
-      {
-        type: "confirm",
-        name: "storybook",
-        message: "Do you want to add storybook?",
-        default: false,
-      },
     ],
     actions: (data) => {
       let path = "";
@@ -92,14 +86,6 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           templateFile: `./component/types.ts.hbs`,
         },
       ];
-
-      if (data && data.storybook) {
-        actions.push({
-          type: "add",
-          path: `${path}{{pascalCase name}}/{{pascalCase name}}.stories.tsx`,
-          templateFile: "./component/stories.tsx.hbs",
-        });
-      }
 
       return actions;
     },

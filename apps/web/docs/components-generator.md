@@ -18,9 +18,6 @@ pnpm generate
 
 3. **Type** (required) - select one of the list of predefined component types. It will use or create specific directory and put component there. Structure is based on [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
 
-4. **Storybook** (optional) - if you want to create storybook stories for this component
-
-
 ### Context
 
 #### Usage
