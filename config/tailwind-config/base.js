@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const { withTV } = require("tailwind-variants/transformer");
 
 /** @type {import('tailwindcss').Config} */

@@ -1,6 +1,7 @@
 #!/bin/sh
+set -e
 echo "🛠️  Running ESLint..."
-eslint ./src -c ./.eslintrc.js --format stylish --ext .js,.jsx,.ts,.tsx
+eslint .
 echo "✅ ESLint completed"
 echo "🛠️  Running TypeScript..."
 tsc --noEmit

@@ -1,9 +1,11 @@
-const dotenv = require('dotenv');
-const fs = require('fs');
-const path = require('path');
+/* eslint-disable */
 
-const rootDir = path.resolve(__dirname, '../..');
-const envDir = path.resolve(rootDir, 'env');
+const dotenv = require("dotenv");
+const fs = require("fs");
+const path = require("path");
+
+const rootDir = path.resolve(__dirname, "../..");
+const envDir = path.resolve(rootDir, "env");
 
 const getPrivateEnvError = (file, key, value) => `
 ❌ NEXT_PUBLIC env vars are not allowed in root .env files.\n 
@@ -32,17 +34,23 @@ module.exports = function buildEnvTypeFile() {
     const result = {};
 
     fs.readdirSync(dir)
-      .filter((file) => file.startsWith('.env') && !file.endsWith('.template'))
+      .filter((file) => file.startsWith(".env") && !file.endsWith(".template"))
       .forEach((file) => {
         const filePath = path.resolve(dir, file);
         const parsed = dotenv.parse(fs.readFileSync(filePath));
 
         Object.entries(parsed).forEach(([key, value]) => {
-          if (public && !key.startsWith('NEXT_PUBLIC')) {
-            console.error('\x1b[31m%s\x1b[0m', getPublicEnvError(file, key, value));
+          if (public && !key.startsWith("NEXT_PUBLIC")) {
+            console.error(
+              "\x1b[31m%s\x1b[0m",
+              getPublicEnvError(file, key, value),
+            );
             process.exit(1);
-          } else if (!public && key.startsWith('NEXT_PUBLIC')) {
-            console.error('\x1b[31m%s\x1b[0m', getPrivateEnvError(file, key, value));
+          } else if (!public && key.startsWith("NEXT_PUBLIC")) {
+            console.error(
+              "\x1b[31m%s\x1b[0m",
+              getPrivateEnvError(file, key, value),
+            );
             process.exit(1);
           }
           result[key] = value;
@@ -56,9 +64,9 @@ module.exports = function buildEnvTypeFile() {
     const result = [];
 
     fs.readdirSync(envDir)
-      .filter((file) => file.startsWith('.env'))
+      .filter((file) => file.startsWith(".env"))
       .forEach((file) => {
-        const envName = file.replace('.env.', '');
+        const envName = file.replace(".env.", "");
         result.push(envName);
       });
 
@@ -76,19 +84,20 @@ module.exports = function buildEnvTypeFile() {
 
   const privateEnvsString = Object.keys(privateEnvs)
     .map((key) => `${key}: string`)
-    .join('\n');
+    .join("\n");
   const publicEnvsString = Object.keys(publicEnvs)
     .map((key) => `${key}: string`)
-    .join('\n');
+    .join("\n");
 
-  const envVarsFileContent = `  
+  const envVarsFileContent = `
+/* eslint-disable */  
 // This file was generated automatically by buildEnvTypeFile.js script
 // Please do not modify it manually
   
 declare namespace NodeJS { 
   export interface ProcessEnv {
 
-    NODE_ENV: ${envTypes.map((val) => `"${val}"`).join(' | ')};\n
+    NODE_ENV: ${envTypes.map((val) => `"${val}"`).join(" | ")};\n
 
 // Public env vars
 ${publicEnvsString} 
@@ -99,7 +108,12 @@ ${privateEnvsString}
   } 
 }`;
 
-  fs.writeFileSync(path.resolve(rootDir, 'environment.d.ts'), envVarsFileContent);
+  fs.writeFileSync(
+    path.resolve(rootDir, "environment.d.ts"),
+    envVarsFileContent,
+  );
 
-  console.log('✅ Environment type file generated successfully (environment.d.ts)');
+  console.log(
+    "✅ Environment type file generated successfully (environment.d.ts)",
+  );
 };

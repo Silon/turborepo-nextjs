@@ -1,12 +1,13 @@
 import { type ButtonHTMLAttributes, forwardRef } from "react";
-import { VariantProps, tv } from "tailwind-variants";
+import type { VariantProps } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 type UiButtonVariants = VariantProps<typeof uiButton>;
 
 export type UiButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
   UiButtonVariants & {
-    type?: "button" | "submit" | "reset";
-    href?: string;
+    readonly href?: string;
+    readonly type?: "button" | "reset" | "submit";
   };
 
 const uiButton = tv({
@@ -22,6 +23,7 @@ const uiButton = tv({
 export const UiButton = forwardRef<HTMLButtonElement, UiButtonProps>(
   ({ children, className, theme = "base", type = "button", ...props }, ref) => {
     return (
+      // eslint-disable-next-line react/button-has-type
       <button ref={ref} type={type} className={uiButton({ theme, className })} {...props}>
         {children}
       </button>

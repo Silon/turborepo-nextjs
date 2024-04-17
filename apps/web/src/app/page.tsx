@@ -1,4 +1,1 @@
-import { ArHomePage, metadata } from "components/pages/ArHomePage";
-
-export { metadata };
-export default ArHomePage;
+export { ArHomePage as default, metadata } from "components/pages/ArHomePage";

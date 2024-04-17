@@ -33,7 +33,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
     actions: (data) => {
       let path = "";
 
-      if (data && data.module) {
+      if (data?.module) {
         path = `../../../src/modules/${data.module}/components`;
       } else {
         path = `../../../src/components`;
@@ -69,7 +69,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           break;
       }
 
-      const actions = [
+      return [
         {
           type: "add",
           path: `${path}{{pascalCase name}}/{{pascalCase name}}.tsx`,
@@ -81,8 +81,6 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           templateFile: `./tv-component/index.ts.hbs`,
         },
       ];
-
-      return actions;
     },
   });
 }

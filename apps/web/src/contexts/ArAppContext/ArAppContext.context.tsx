@@ -1,11 +1,11 @@
 "use client";
 
 import { createContext, useMemo, useReducer } from "react";
-import {
+import { arAppContextReducer } from "./ArAppContext.reducer";
+import type {
   ArAppContextActionsType,
   ArAppContextStateType,
 } from "./ArAppContext.types";
-import { arAppContextReducer } from "./ArAppContext.reducer";
 
 /**
  *
@@ -40,8 +40,8 @@ export function ArAppContextProvider({
   children,
   initialState = INITIAL_STATE,
 }: {
-  children: React.ReactNode;
-  initialState?: ArAppContextStateType;
+  readonly children: React.ReactNode;
+  readonly initialState?: ArAppContextStateType;
 }) {
   /**
    * useReducer
@@ -61,7 +61,7 @@ export function ArAppContextProvider({
   const customAction = async (payload: number) => {
     dispatch({ type: "set", payload });
     await new Promise((resolve) => {
-      setTimeout(resolve, 1000);
+      setTimeout(resolve, 1_000);
     });
     dispatch({ type: "increment" });
   };

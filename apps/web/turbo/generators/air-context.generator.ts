@@ -18,7 +18,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
     actions: (data) => {
       let path = "";
 
-      if (data && data.module) {
+      if (data?.module) {
         path = `../../../src/modules/${data.module}/contexts`;
       } else {
         path = `../../../src/contexts`;

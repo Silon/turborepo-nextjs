@@ -1,13 +1,13 @@
-import { ArContextAction, ArContextActionWithPayload } from "types";
+import type { ArContextAction, ArContextActionWithPayload } from "types";
 
 export type ArAppContextStateType = {
   count: number;
 };
 
 export type ArAppContextActionsType = {
-  increment: () => void;
-  set: (count: number) => void;
-  customAction: (payload: number) => void;
+  customAction(payload: number): void;
+  increment(): void;
+  set(count: number): void;
 };
 
 export type ArAppContextAction =

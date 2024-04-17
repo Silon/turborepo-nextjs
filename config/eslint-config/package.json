@@ -1,0 +1,19 @@
+{
+  "name": "@repo/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.mjs"
+  ],
+  "devDependencies": {
+    "eslint-config-neon": "^0.1.62",
+    "globals": "^15.0.0",
+    "lodash.merge": "^4.6.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.7.0"
+  }
+}

@@ -1,9 +1,11 @@
 import { type InputHTMLAttributes, forwardRef } from "react";
-import { VariantProps, tv } from "tailwind-variants";
+import type { VariantProps } from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 type UiFormTextInputVariants = VariantProps<typeof uiFormTextInput>;
 
-export type UiButtonProps = InputHTMLAttributes<HTMLInputElement> & UiFormTextInputVariants & {};
+export type UiButtonProps = InputHTMLAttributes<HTMLInputElement> &
+  UiFormTextInputVariants & {};
 
 const uiFormTextInput = tv({
   base: "flex",
@@ -16,11 +18,14 @@ const uiFormTextInput = tv({
 });
 
 export const UiFormTextInput = forwardRef<HTMLInputElement, UiButtonProps>(
-  ({ children, className, type = "text", theme = "base", ...props }, ref) => {
+  ({ className, type = "text", theme = "base", ...props }, ref) => {
     return (
-      <input ref={ref} type={type} className={uiFormTextInput({ theme, className })} {...props}>
-        {children}
-      </input>
+      <input
+        ref={ref}
+        type={type}
+        className={uiFormTextInput({ theme, className })}
+        {...props}
+      />
     );
-  }
+  },
 );

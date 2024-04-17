@@ -31,7 +31,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           break;
       }
 
-      const actions = [
+      return [
         {
           type: "add",
           path: `${path}{{pascalCase name}}/{{pascalCase name}}.tsx`,
@@ -43,8 +43,6 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           templateFile: `./page-layout/index.ts.hbs`,
         },
       ];
-
-      return actions;
     },
   });
 }

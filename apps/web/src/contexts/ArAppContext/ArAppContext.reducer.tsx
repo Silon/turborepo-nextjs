@@ -1,12 +1,20 @@
-import { ArAppContextAction, ArAppContextStateType } from './ArAppContext.types';
+import type {
+  ArAppContextAction,
+  ArAppContextStateType,
+} from "./ArAppContext.types";
 
-export function arAppContextReducer(state: ArAppContextStateType, action: ArAppContextAction) {
+export function arAppContextReducer(
+  state: ArAppContextStateType,
+  action: ArAppContextAction,
+) {
   switch (action.type) {
-    case 'increment':
+    case "increment":
       return { count: state.count + 1 };
-    case 'set':
+    case "set":
       return { count: action.payload };
     default:
-      throw new Error();
+      throw new Error(
+        `Unhandled action type: ${JSON.stringify(action, null, 2)}`,
+      );
   }
 }

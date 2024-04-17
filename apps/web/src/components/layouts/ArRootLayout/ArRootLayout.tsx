@@ -1,11 +1,11 @@
 import "styles/globals.css";
 
-import React from "react";
 import type { Metadata } from "next";
+import React from "react";
 import { ArAppContextProvider } from "contexts/ArAppContext";
 
 type Props = {
-  children: React.ReactNode;
+  readonly children: React.ReactNode;
 };
 
 export const metadata: Metadata = {

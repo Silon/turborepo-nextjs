@@ -21,22 +21,24 @@
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit"
   },
   /* Disable JavaScript default validation to prevent linting duplicates */
   "javascript.validate.enable": false,
   
   /* Eslit */
-  "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
-  ],
+  "eslint.experimental.useFlatConfig": true, // VERY IMPORTANT!!!
+
   // Tailwind Variants
   "tailwindCSS.experimental.classRegex": [
     ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ],
   "cSpell.words": [
-    "tailwindcss"
+    "nextjs",
+    "postbuild",
+    "svgr",
+    "tailwindcss",
+    "tsdoc",
+    "tseslint",
+    "turborepo"
   ]
 }

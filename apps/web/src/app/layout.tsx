@@ -1,4 +1,4 @@
-import { ArRootLayout, metadata } from "components/layouts/ArRootLayout";
-
-export { metadata };
-export default ArRootLayout;
+export {
+  ArRootLayout as default,
+  metadata,
+} from "components/layouts/ArRootLayout";

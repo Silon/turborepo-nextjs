@@ -1,10 +1,15 @@
-const withAppEnvs = require('./scripts/withAppEnvs');
-const withSvgLoader = require('./scripts/withSvgLoader');
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+/* eslint-disable */
+
+const withAppEnvs = require("./scripts/withAppEnvs");
+const withSvgLoader = require("./scripts/withSvgLoader");
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
 });
 
-const compose = (...fns) => (arg) => fns.reduce((composed, f) => f(composed), arg);
+const compose =
+  (...fns) =>
+  (arg) =>
+    fns.reduce((composed, f) => f(composed), arg);
 
 /** @type {import('next').NextConfig} */
 module.exports = compose(
@@ -14,4 +19,7 @@ module.exports = compose(
 )({
   reactStrictMode: true,
   transpilePackages: ["@repo/ui"],
+  experimental: {
+    typedRoutes: true,
+  },
 });

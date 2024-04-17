@@ -1,7 +1,9 @@
-const path = require('path');
-const fs = require('fs');
-const dotenv = require('dotenv');
-const buildEnvTypeFile = require('./buildEnvTypeFile');
+/* eslint-disable */
+
+const path = require("path");
+const fs = require("fs");
+const dotenv = require("dotenv");
+const buildEnvTypeFile = require("./buildEnvTypeFile");
 
 function getAppEnvs() {
   const projectDir = process.cwd();
@@ -9,10 +11,10 @@ function getAppEnvs() {
   let APP_ENV = process.env.APP_ENV || process.env.NODE_ENV;
 
   if (!APP_ENV) {
-    throw new Error('APP_ENV is undefined');
+    throw new Error("APP_ENV is undefined");
   }
 
-  const envFilePath = path.join(projectDir, 'env', `.env.${APP_ENV}`);
+  const envFilePath = path.join(projectDir, "env", `.env.${APP_ENV}`);
 
   if (!fs.existsSync(envFilePath)) {
     throw new Error(`.env.${APP_ENV} file not found`);
@@ -21,7 +23,7 @@ function getAppEnvs() {
   // Create object from .env file
   const envsObject = dotenv.parse(fs.readFileSync(envFilePath));
 
-  console.log('\x1b[33m%s\x1b[0m', '⚙️ Using env file:', envFilePath);
+  console.log("\x1b[33m%s\x1b[0m", "⚙️ Using env file:", envFilePath);
 
   return {
     APP_ENV: APP_ENV,

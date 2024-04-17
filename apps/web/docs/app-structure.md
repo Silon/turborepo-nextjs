@@ -94,5 +94,3 @@ This directory contains all styles used in the project. Only css files should be
 ### utils
 
 This directory contains all utility functions used in the project. Utils are pure TS functions that are used in multiple places in the project and **their logic doesn't use business logic.** Difference between utils and helpers is that utils will work in other projects because they are not using business logic.
-
-

@@ -1,12 +1,12 @@
-import React from "react";
-import type { Metadata } from "next";
-import SvgIcon from "assets/svg/icon-info.svg";
 import { UiButton } from "@repo/ui/UiButton";
 import { UiFormTextInput } from "@repo/ui/UiFormTextInput";
 import { UiIcon } from "@repo/ui/UiIcon";
+import type { Metadata } from "next";
+import React from "react";
+import SvgIcon from "assets/svg/icon-info.svg";
 
 type Props = {
-  children: React.ReactNode;
+  readonly children: React.ReactNode;
 };
 
 export const metadata: Metadata = {
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   description: "Ar Home Page Description",
 };
 
-export function ArHomePage(props: Props) {
-  console.log("ArHomePage props:", props);
+export function ArHomePage({ children }: Props) {
+  console.log("ArHomePage props:", { children });
   return (
     <div className="container flex flex-col gap-6 p-10">
       <div>
