@@ -22,10 +22,7 @@
 
 ## Getting Started
 
-To start using this template, you can use one of the following methods:
-
-- Select "Use this template" on GitHub repository page
-- Clone this repository
+- Clone this repository or select "Use this template" on GitHub repository page
 - Use `pnpm i` to install dependencies
 - Use `pnpm prepare` to install husky hooks
 
