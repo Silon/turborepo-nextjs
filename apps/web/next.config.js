@@ -1,5 +1,8 @@
 /* eslint-disable */
 
+const createNextIntlPlugin = require("next-intl/plugin");
+const withNextIntl = createNextIntlPlugin();
+
 const withAppEnvs = require("./scripts/withAppEnvs");
 const withSvgLoader = require("./scripts/withSvgLoader");
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
@@ -16,6 +19,7 @@ module.exports = compose(
   withAppEnvs,
   withSvgLoader,
   withBundleAnalyzer,
+  withNextIntl,
 )({
   reactStrictMode: true,
   transpilePackages: ["@repo/ui"],

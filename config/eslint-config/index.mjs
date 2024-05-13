@@ -71,6 +71,7 @@ const overrides = {
     "tsdoc/syntax": 0,
     "unicorn/no-abusive-eslint-disable": 0,
     "@typescript-eslint/no-unused-vars": ["error"],
+    "id-length": 0,
   },
 };
 

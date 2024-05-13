@@ -4,6 +4,7 @@ import { UiIcon } from "@repo/ui/UiIcon";
 import type { Metadata } from "next";
 import React from "react";
 import SvgIcon from "assets/svg/icon-info.svg";
+import { ArText } from "components/atoms/ArText";
 
 type Props = {
   readonly children: React.ReactNode;
@@ -29,6 +30,10 @@ export function ArHomePage({ children }: Props) {
       <div>
         <h3 className="font-bold">UiFormTextInput</h3>
         <UiFormTextInput />
+      </div>
+      <div>
+        <h3 className="font-bold">ArText (tx)</h3>
+        <ArText tx="common.title" />
       </div>
     </div>
   );
