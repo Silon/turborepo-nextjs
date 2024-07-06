@@ -10,24 +10,20 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         message: "Component name:",
       },
       {
-        type: "input",
-        name: "module",
-        message: "Module name (leave empty if component is common):",
-      },
-      {
         type: "list",
         name: "type",
-        message: "Select type of the component",
-        choices: [
-          "atom",
-          "molecule",
-          "organism",
-          "util",
-          "template",
-          "layout",
-          "page",
-          "module",
-        ],
+        message: "Select type",
+        choices: ["classic-react", "tailwind-variants"],
+      },
+      {
+        type: "input",
+        name: "module",
+        message: "Global Module name (leave empty if component is common):",
+      },
+      {
+        type: "input",
+        name: "group",
+        message: "Components group name (common, utils or your custom name):",
       },
     ],
     actions: (data) => {
@@ -39,34 +35,21 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         path = `../../../src/components`;
       }
 
-      switch (data?.type) {
-        case "atom":
-          path = `${path}/atoms/`;
-          break;
-        case "molecule":
-          path = `${path}/molecules/`;
-          break;
-        case "organism":
-          path = `${path}/organisms/`;
-          break;
-        case "module":
-          path = `${path}/modules/`;
-          break;
-        case "template":
-          path = `${path}/templates/`;
-          break;
-        case "util":
-          path = `${path}/utils/`;
-          break;
-        case "layout":
-          path = `${path}/layouts/`;
-          break;
-        case "page":
-          path = `${path}/pages/`;
-          break;
-        default:
-          path = `${path}/`;
-          break;
+      path = `${path}/${data?.group ? `${data?.group}/` : ""}`;
+
+      if (data?.type === "tailwind-variants") {
+        return [
+          {
+            type: "add",
+            path: `${path}{{pascalCase name}}/{{pascalCase name}}.tsx`,
+            templateFile: `./tv-component/component.tsx.hbs`,
+          },
+          {
+            type: "add",
+            path: `${path}{{pascalCase name}}/index.ts`,
+            templateFile: `./tv-component/index.ts.hbs`,
+          },
+        ];
       }
 
       return [

@@ -1,8 +1,8 @@
 import type { PlopTypes } from "@turbo/gen";
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
-  plop.setGenerator("context", {
-    description: "create new basic context",
+  plop.setGenerator("ar-context", {
+    description: "crete new context (complex state management)",
     prompts: [
       {
         type: "input",
@@ -28,17 +28,27 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         {
           type: "add",
           path: `${path}/{{kebabCase name}}/index.ts`,
-          templateFile: "./context/index.ts.hbs",
+          templateFile: "./ar-context/index.ts.hbs",
+        },
+        {
+          type: "add",
+          path: `${path}/{{kebabCase name}}/types.tsx`,
+          templateFile: "./ar-context/types.ts.hbs",
         },
         {
           type: "add",
           path: `${path}/{{kebabCase name}}/context.tsx`,
-          templateFile: "./context/context.tsx.hbs",
+          templateFile: "./ar-context/context.tsx.hbs",
+        },
+        {
+          type: "add",
+          path: `${path}/{{kebabCase name}}/reducer.tsx`,
+          templateFile: "./ar-context/reducer.tsx.hbs",
         },
         {
           type: "add",
           path: `${path}/{{kebabCase name}}/hooks.tsx`,
-          templateFile: "./context/hooks.ts.hbs",
+          templateFile: "./ar-context/hooks.tsx.hbs",
         },
       ];
     },

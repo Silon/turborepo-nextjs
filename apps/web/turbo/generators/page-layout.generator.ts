@@ -1,8 +1,8 @@
 import type { PlopTypes } from "@turbo/gen";
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
-  plop.setGenerator("page-or-layout", {
-    description: "create new page or layout",
+  plop.setGenerator("page-layout-template", {
+    description: "create new page, layout or template",
     prompts: [
       {
         type: "input",
@@ -13,11 +13,11 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         type: "list",
         name: "type",
         message: "Select type",
-        choices: ["page", "layout"],
+        choices: ["page", "layout", "template"],
       },
     ],
     actions: (data) => {
-      let path = "../../../src/components";
+      let path = "../../../src/routes";
 
       switch (data?.type) {
         case "layout":
@@ -25,6 +25,9 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           break;
         case "page":
           path = `${path}/pages/`;
+          break;
+        case "template":
+          path = `${path}/templates/`;
           break;
         default:
           path = `${path}/`;

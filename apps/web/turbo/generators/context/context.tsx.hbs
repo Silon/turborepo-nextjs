@@ -1,8 +1,8 @@
-import { createContext, useMemo, useState } from 'react';
+import { createContext, useMemo, useState } from "react";
 
 export type {{pascalCase name}}Type = {
   count: number;
-  setCount: (count: number) => void;
+  setCount(count: number): void;
 };
 
 /**
@@ -26,8 +26,8 @@ export function {{pascalCase name}}Provider({
   children,
   initialState = INITIAL_STATE,
 }: {
-  children: React.ReactNode;
-  initialState: {{pascalCase name}}Type;
+  readonly children: React.ReactNode;
+  readonly initialState?: {{pascalCase name}}Type;
 }) {
   const [count, setCount] = useState(initialState.count);
 

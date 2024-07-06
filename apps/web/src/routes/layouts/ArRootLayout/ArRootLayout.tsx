@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import React from "react";
-import { ArAppContextProvider } from "contexts/ArAppContext";
+import { ArGlobalStateProvider } from "state/ar-global";
 
 type Props = {
   readonly children: React.ReactNode;
@@ -16,15 +16,21 @@ export const metadata: Metadata = {
   description: "Ar Root Layout Description",
 };
 
-export async function ArRootLayout({ children, params }: Props) {
+async function Providers({ children }: { readonly children: React.ReactNode }) {
   const messages = await getMessages();
 
   return (
+    <NextIntlClientProvider messages={messages}>
+      <ArGlobalStateProvider>{children}</ArGlobalStateProvider>
+    </NextIntlClientProvider>
+  );
+}
+
+export async function ArRootLayout({ children, params }: Props) {
+  return (
     <html lang={params.locale}>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          <ArAppContextProvider>{children}</ArAppContextProvider>
-        </NextIntlClientProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

@@ -4,5 +4,5 @@ echo "🛠️  Running ESLint..."
 eslint .
 echo "✅ ESLint completed"
 echo "🛠️  Running TypeScript..."
-tsc --noEmit
+tsc --noEmit --project tsconfig.json
 echo "✅ TypeScript completed"

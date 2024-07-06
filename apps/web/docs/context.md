@@ -1,14 +1,14 @@
-# Air Context
+# Ar Context
 
-## How Air Context works
+## How Ar Context works
 
-Air Context is composed of two React Contexts that depend on each other. The first one (State) is responsible for storing the state and the second one (Actions) for storing actions that are responsible for modifying its state.
+Ar Context is composed of two React Contexts that depend on each other. The first one (State) is responsible for storing the state and the second one (Actions) for storing actions that are responsible for modifying its state.
 
 ## Logic
 
 ### name.context.ts
 
-Main Air Context file where we store the Context and its Provider. It also contains the Context's state and actions. The state is initialized with the default values.
+Main Ar Context file where we store the Context and its Provider. It also contains the Context's state and actions. The state is initialized with the default values.
 
 This file contains `state` variable which is created with `useReducer` hook. The `state` variable is passed to the State Context Provider as a value. The `actions` variable is created with `useMemo` hook and it is passed to the Actions Context Provider as a value.
 
@@ -30,11 +30,11 @@ This file contains hooks that are used to get the state and actions from the Con
 
 This file contains types that are used in the Context.
 
-## How to create Air Context
+## How to create Ar Context
 
 Use `pnpm generate` command to create new Context. It will create all necessary files and folders.
 
-## How to use Air Context
+## How to use Ar Context
 
 Use `ContextNameProvider` exported from ContextName.context.ts file to wrap your component with the Context Provider and place it where you want to use the Context. Global context should be placed in `src/components/layouts/ArLayoutMain/ArLayoutMain.tsx` file.
 

@@ -1,8 +1,8 @@
-import React from 'react';
 import type { Metadata } from "next";
+import React from "react";
 
 type Props = {
-  children: React.ReactNode;
+  readonly children: React.ReactNode;
 };
 
 export const metadata: Metadata = {
@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   description: "{{titleCase name}} Description",
 };
 
-export function {{pascalCase name}}(props: Props) {
-  console.log('{{pascalCase name}} props:', props)
-  return <div className="container">{{pascalCase name}}</div>
+export function {{pascalCase name}}({ children }: Props) {
+  return <div className="container">{children}</div>;
 };

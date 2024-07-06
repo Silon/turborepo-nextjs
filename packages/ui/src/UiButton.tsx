@@ -23,8 +23,13 @@ const uiButton = tv({
 export const UiButton = forwardRef<HTMLButtonElement, UiButtonProps>(
   ({ children, className, theme = "base", type = "button", ...props }, ref) => {
     return (
-      // eslint-disable-next-line react/button-has-type
-      <button ref={ref} type={type} className={uiButton({ theme, className })} {...props}>
+      <button
+        ref={ref}
+        // eslint-disable-next-line react/button-has-type
+        type={type}
+        className={uiButton({ theme, className })}
+        {...props}
+      >
         {children}
       </button>
     );

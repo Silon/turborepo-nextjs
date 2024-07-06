@@ -4,7 +4,7 @@ import { UiIcon } from "@repo/ui/UiIcon";
 import type { Metadata } from "next";
 import React from "react";
 import SvgIcon from "assets/svg/icon-info.svg";
-import { ArText } from "components/atoms/ArText";
+import { ArText } from "components/common/ArText";
 
 type Props = {
   readonly children: React.ReactNode;
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export function ArHomePage({ children }: Props) {
   console.log("ArHomePage props:", { children });
   return (
-    <div className="container flex flex-col gap-6 p-10">
+    <div className="container flex flex-col items-start gap-6 p-10">
       <div>
         <h3 className="font-bold">UiIcon</h3>
         <UiIcon theme="primary" icon={SvgIcon} size={20} />
