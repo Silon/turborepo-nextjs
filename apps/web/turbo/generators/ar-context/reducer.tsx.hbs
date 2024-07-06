@@ -1,0 +1,12 @@
+import type { {{pascalCase name}}StateAction, {{pascalCase name}}StateType } from "./types";
+
+export function {{camelCase name}}StateReducer(state: {{pascalCase name}}StateType, action: {{pascalCase name}}StateAction) {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    case "set":
+      return { count: action.payload };
+    default:
+      throw new Error("Unhandled action type");
+  }
+}

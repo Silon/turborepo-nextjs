@@ -1,96 +1,65 @@
 # App Structure
 
-## 📁 Directory Structure
-
 ```sh
+├── app
 ├── assets
 │   ├── svg
-│   └── images
+│   └── images 
 ├── components
-│   ├── atoms
-│   ├── layouts
-│   ├── molecules
-│   ├── organisms
-│   ├── pages
-│   ├── templates
+│   ├── common
 │   └── utils
-├── config
-├── contexts
-├── helpers
-├── hooks
+├── lib
+│   ├── helpers
+│   ├── hooks
+│   └── utils
+├── routes
+│   ├── layouts
+│   ├── pages
+│   └── templates
+├── state
 ├── modules
 │   └── [module-name]
 │       └── [...]
-├── styles
-└── utils
+└── styles
 ```
 
-## 📁 Directory Structure Description
+### app
+Contains Next.js specific router files. It should only contain the routing logic and represent the structure of the app. All pages, layouts, and templates should be placed in the routes folder.
 
 ### assets
-
-This directory contains all assets used in the project. It is divided into two subdirectories: `icons` and `images`.
-
-#### assets/svg
-
-This directory contains all SVG icons used in the project. It should use file names in `kebab-case` format and with `icon` prefix (e.g. `icon-arrow.svg`).
-
-#### assets/images
-
-This directory contains all images used in the project. It should use file names in `kebab-case` format (e.g. `image-name.png`).
+Contains all the static assets like images, fonts, and SVGs.
 
 ### components
+Contains all the reusable components. Here you can create directories for business or ui modules and place all the related components in that directory like `components/auth`, `components/blog`, etc.
 
-This directory contains all **common** components used in the project. Structure of this directory is based on [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) but it's extended with nextJS specific components.
+### components/common
+Contains all the common components that can be used across the app. For example forms wrapper, generic components, etc.
 
-#### components/atoms
+### components/utils
+Contains all the utility components like auth gate, error boundary, etc.
 
-Basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.
+### lib
+Contains all the utility functions, hooks, and helpers.
 
-#### components/molecules
+### lib/hooks
+Contains all the custom hooks. Custom hooks are the hooks that are used across the app and are not related to any specific module.
 
-Groups of atoms bonded together and are the smallest fundamental units of a compound. These molecules take on their own properties and serve as the backbone of our design systems.
+### lib/helpers
+Contains all the helper functions. Helper functions are the functions that are used across the app and are not related to any specific module. 
 
-#### components/organisms
+### lib/utils
+Contains all the utility functions. Utility functions are the functions that are used across the app and are not related to any specific module. 
 
-Molecules give us some building blocks to work with, and we can now combine them together to form organisms. Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface.
+**Note: The difference between helpers and utils is that helpers are more specific to the app (include business logic, e.g. price calculation) and utils are more generic (e.g. deep cloning).**
 
-#### components/pages
+### routes
+Contains components of all the pages, layouts, and templates. They are imported in the app folder.
 
-This directory contains all pages used in the project. They are used by App Router and exported from `src/app/[...]/page.ts` files.
-
-#### components/templates
-
-This directory contains all templates used in the project. They are used by App Router and exported from `src/app/[...]/template.ts` files.
-
-#### components/utils
-
-This directory contains all utility components used in the project like `AuthGate` or `PrivateRoute`.
-
-### config
-
-This directory contains all configuration files used in the project like `routes.ts` with all routes used in the project or other constants.
-
-### contexts
-
-This directory contains all contexts used in the project. See [Context](../../docs/context.md) for more details.
-
-### helpers
-
-This directory contains all helper functions used in the project. Helpers are pure TS functions that are used in multiple places in the project and **their logic uses business logic.** Difference between helpers and utils is that helpers will not work in other projects because they are using business logic.
-
-### hooks
-
-This directory contains all hooks used in the project. Hooks are part of React and they are used to share logic between components.
+### state
+Contains all the global state management logic. You can use any state management library like Redux, Recoil, Zustand or stay with React Context API.
 
 ### modules
-
-This directory contains all modules used in the project. Modules are used to separate business logic from the rest of the project. Example of module is `auth` module that is responsible for authentication process or `blog` module that is responsible for blog part of website. Modules are divided into subdirectories with module name and inside of them there are all files related only to this module with same structure as in `src/app` directory.
+Contains all the feature modules. Each module should have its own folder with all the related components, hooks, and utils.
 
 ### styles
-
-This directory contains all styles used in the project. Only css files should be placed here.
-
-### utils
-
-This directory contains all utility functions used in the project. Utils are pure TS functions that are used in multiple places in the project and **their logic doesn't use business logic.** Difference between utils and helpers is that utils will work in other projects because they are not using business logic.
+Contains all the global styles.

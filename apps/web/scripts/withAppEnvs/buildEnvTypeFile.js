@@ -29,8 +29,8 @@ const getPublicEnvError = (file, key, value) => `
 
 module.exports = function buildEnvTypeFile() {
   function getEnvs(options) {
-    const { public } = options;
-    const dir = public ? envDir : rootDir;
+    const { public: isPublic } = options;
+    const dir = isPublic ? envDir : rootDir;
     const result = {};
 
     fs.readdirSync(dir)
@@ -40,13 +40,13 @@ module.exports = function buildEnvTypeFile() {
         const parsed = dotenv.parse(fs.readFileSync(filePath));
 
         Object.entries(parsed).forEach(([key, value]) => {
-          if (public && !key.startsWith("NEXT_PUBLIC")) {
+          if (isPublic && !key.startsWith("NEXT_PUBLIC")) {
             console.error(
               "\x1b[31m%s\x1b[0m",
               getPublicEnvError(file, key, value),
             );
             process.exit(1);
-          } else if (!public && key.startsWith("NEXT_PUBLIC")) {
+          } else if (!isPublic && key.startsWith("NEXT_PUBLIC")) {
             console.error(
               "\x1b[31m%s\x1b[0m",
               getPrivateEnvError(file, key, value),
