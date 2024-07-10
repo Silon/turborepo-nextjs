@@ -4,39 +4,44 @@
 # Start developing
 dev
 
-# Build production app
-build
+# Lint code with ESLint
+lint
 
 # Preview app (build and start)
 preview
 
-# Build, Start, Preview and Bundle Analyze development app
-build:development
-start:development
-preview:development
-analyze:development
+# Analyze bundle size
+analyze
 
-# Develop, Build, Start, Preview and Bundle Analyze staging app
-dev:staging
-build:staging
-start:staging
-preview:staging
-analyze:staging
+# Build production app
+build
 
-# Develop, Build, Start, Preview and Bundle Analyze production app
-dev:production
-build:production
-start:production
-preview:production
-analyze:production
+# Start production app
+start
 
 # Create new component or context
-pnpm generate
+generate
 
 # Create sitemap
-pnpm sitemap
+sitemap
 ```
 
-## Documentation
+## Conventional Commits
 
-[Web App Project Documentation](../../blob/master/apps/web/docs/index.md)
+We use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to standardize commit messages.
+
+You can add the <a href="https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits">Conventional Commits</a> plugin to your VSCode and make life easier!
+
+## App Structure
+
+[Read about app structure](../../blob/master/apps/web/docs/app-structure.md)
+
+## Contexts
+
+[Read about contexts](../../blob/master/apps/web/docs/context.md)
+
+
+## Others
+
+#### Envs Types File 
+File `environment.d.ts` is automatically generated from `.env` files in the root of the project, after run `dev` command.

@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
-echo "🛠️  Running ESLint..."
+echo "🛠️  Checking code with ESLint..."
 eslint .
-echo "✅ ESLint completed"
-echo "🛠️  Running TypeScript..."
+echo "\033[32m✓\033[0m ESLint completed"
+echo "🛠️  Checking code with TypeScript..."
 tsc --noEmit --project tsconfig.json
-echo "✅ TypeScript completed"
+echo "\033[32m✓\033[0m TypeScript completed"

@@ -39,6 +39,7 @@
     "tailwindcss",
     "tsdoc",
     "tseslint",
-    "turborepo"
+    "turborepo",
+    "Zustand"
   ]
 }
