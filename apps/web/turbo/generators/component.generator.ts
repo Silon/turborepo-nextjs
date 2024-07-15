@@ -7,7 +7,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       {
         type: "input",
         name: "name",
-        message: "Component name:",
+        message: "Component name (ArPascalCase):",
       },
       {
         type: "list",

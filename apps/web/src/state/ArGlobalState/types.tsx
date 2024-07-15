@@ -10,6 +10,6 @@ export type ArGlobalStateActionsType = {
   set(count: number): void;
 };
 
-export type ArGlobalStateAction = 
+export type ArGlobalStateAction =
   | ArContextAction<"increment">
   | ArContextActionWithPayload<"set", number>;

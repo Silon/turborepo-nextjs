@@ -3,7 +3,7 @@ type Props = {
   readonly fallback: React.ReactNode;
 };
 
-export function ArAuthGate({ children, fallback }: Props) {
+export async function ArAuthGate({ children, fallback }: Props) {
   const user = true;
   return user ? children : fallback;
 }

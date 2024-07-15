@@ -1,23 +1,22 @@
 {
-	"$schema": "https://json.schemastore.org/tsconfig.json",
-	"extends": "./tsconfig.json",
-	"compilerOptions": {
-		"allowJs": true
-	},
-	"include": [
-		"*.ts",
-		"*.tsx",
-		"*.js",
-		"*.jsx",
-		"*.cjs",
-		"*.mjs",
-    	"./.*.js",
-		"turbo",
-		"src",
-		"bin",
-		"scripts",
-		"__tests__",
-		"__mocks__"
-	],
-	"exclude": ["node_modules", "./next-env.d.ts"]
+  "$schema": "https://json.schemastore.org/tsconfig.json",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true
+  },
+  "include": [
+    "scripts",
+    "src",
+    "next-env.d.ts",
+    "next.config.mjs",
+    "**/*.ts",
+    "**/*.tsx",
+    "*.js",
+    "*.jsx",
+    "*.ts",
+    "*.tsx",
+    ".*.js",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules", "tasks", "public", "messages", ".turbo", ".next"]
 }
