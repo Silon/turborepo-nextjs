@@ -27,5 +27,5 @@ export const UiFormTextInput = forwardRef<HTMLInputElement, UiButtonProps>(
         {...props}
       />
     );
-  },
+  }
 );

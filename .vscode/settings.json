@@ -19,11 +19,14 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
   },
   /* Disable JavaScript default validation to prevent linting duplicates */
   "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
   
   /* Eslit */
   "eslint.experimental.useFlatConfig": true, // VERY IMPORTANT!!!
@@ -41,5 +44,5 @@
     "tseslint",
     "turborepo",
     "Zustand"
-  ]
+  ],
 }

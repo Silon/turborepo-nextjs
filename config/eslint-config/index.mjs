@@ -50,6 +50,7 @@ const typeScriptRules = merge(...typescript, {
   },
   rules: {
     "@typescript-eslint/consistent-type-definitions": [2, "type"],
+    "@typescript-eslint/no-unused-vars": ["error"],
   },
   settings: {
     "import/resolver": {
@@ -70,14 +71,13 @@ const overrides = {
   rules: {
     "tsdoc/syntax": 0,
     "unicorn/no-abusive-eslint-disable": 0,
-    "@typescript-eslint/no-unused-vars": ["error"],
     "id-length": 0,
   },
 };
 
 export default tseslint.config(
   {
-    ignores: ["**/node_modules/", ".git/", "**/dist/", "**/.next/", "**/next-env.d.ts"],
+    ignores: [".git/", "**/node_modules/", "**/dist/", "**/.next/"],
   },
   commonRules,
   browserRules,
@@ -87,8 +87,6 @@ export default tseslint.config(
   nextRules,
   edgeRules,
   prettierRules,
-  //
-  // Overrides
-  //
+  // Overrides for project specific rules:
   overrides
 );

@@ -7,7 +7,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       {
         type: "input",
         name: "name",
-        message: "Context name (kebab-case):",
+        message: "Context name (ArPascalCase):",
       },
       {
         type: "input",
@@ -27,17 +27,17 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       return [
         {
           type: "add",
-          path: `${path}/{{kebabCase name}}/index.ts`,
+          path: `${path}/{{pascalCase name}}/index.ts`,
           templateFile: "./context/index.ts.hbs",
         },
         {
           type: "add",
-          path: `${path}/{{kebabCase name}}/context.tsx`,
+          path: `${path}/{{pascalCase name}}/context.tsx`,
           templateFile: "./context/context.tsx.hbs",
         },
         {
           type: "add",
-          path: `${path}/{{kebabCase name}}/hooks.tsx`,
+          path: `${path}/{{pascalCase name}}/hooks.tsx`,
           templateFile: "./context/hooks.ts.hbs",
         },
       ];

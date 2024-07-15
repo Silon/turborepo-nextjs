@@ -27,10 +27,6 @@
 - Use `pnpm i` to install dependencies
 - Use `pnpm prepare` to install husky hooks
 
-## Documentation
-
-Web App Documentation: [README.md](apps/web/docs/index.md)
-
 ## Commands
 
 ```sh
@@ -55,3 +51,9 @@ commit
 # Inspect ESLint configuration
 inspect-eslint
 ```
+
+## Conventional Commits
+
+We use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to standardize commit messages.
+
+You can add the <a href="https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits">Conventional Commits</a> plugin to your VSCode and make life easier!

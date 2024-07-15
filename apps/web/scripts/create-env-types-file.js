@@ -1,17 +1,21 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable @typescript-eslint/no-require-imports */
-const fs = require("node:fs");
-const path = require("node:path");
-const dotenv = require("dotenv");
-
-const rootDir = path.resolve(__dirname, "../..");
-
 async function createEnvTypesFile() {
+  const fs = await import("node:fs");
+  const path = await import("node:path");
+  const dotenv = await import("dotenv");
+  const rootDir = path.resolve(__dirname, "..");
+
   const result = {};
   const files = await fs.promises.readdir(rootDir);
-  const envFiles = files.filter(
+  let envFiles = files.filter(
     (file) => file.startsWith(".env") && !file.endsWith(".template"),
   );
+
+  if (!envFiles.length) {
+    // Use .env.template files if .env files are not present
+    envFiles = files.filter(
+      (file) => file.startsWith(".env") && file.endsWith(".template"),
+    );
+  }
 
   for (const file of envFiles) {
     const filePath = path.resolve(rootDir, file);
@@ -28,7 +32,7 @@ async function createEnvTypesFile() {
 
   const fileContent = `
 /* eslint-disable */  
-// This file was generated automatically by buildEnvTypeFile.js script
+// This file was generated automatically by create-env-types-file.js script
 // Please do not modify it manually
   
 declare namespace NodeJS { 

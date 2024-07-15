@@ -1,2 +1,2 @@
-export * from './ArText';
-export * from './ArText.types';
+export * from "./ArText";
+export * from "./ArText.types";

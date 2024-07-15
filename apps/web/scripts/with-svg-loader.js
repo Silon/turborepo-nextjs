@@ -1,7 +1,5 @@
-/* eslint-disable */
-
 /** @type {import('next').NextConfig} */
-module.exports = function (nextConfig) {
+module.exports = function NextConfig(nextConfig) {
   return {
     ...nextConfig,
     webpack(config, context) {
@@ -9,7 +7,7 @@ module.exports = function (nextConfig) {
       // into React components. See https://react-svgr.com/docs/next/
 
       // Grab the existing rule that handles SVG imports
-      // @ts-ignore - rules is a private property that is not typed
+      // @ts-expect-error - rules is a private property that is not typed
       const fileLoaderRule = config.module.rules.find((rule) =>
         rule.test?.test?.(".svg"),
       );

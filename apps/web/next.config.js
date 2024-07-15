@@ -1,12 +1,12 @@
-/* eslint-disable */
-
-const createNextIntlPlugin = require("next-intl/plugin");
-const withNextIntl = createNextIntlPlugin();
-
-const withSvgLoader = require("./scripts/withSvgLoader");
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
+/* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint-disable @typescript-eslint/no-var-requires */
+  const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
+const createNextIntlPlugin = require("next-intl/plugin");
+const withSvgLoader = require("./scripts/with-svg-loader");
+
+const withNextIntl = createNextIntlPlugin();
 
 const compose =
   (...fns) =>
