@@ -1,7 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env"],
-  "pipeline": {
+  "tasks": {
     "build": {
       "dependsOn": ["^build", "lint"],
       "outputs": [".next/**", "!.next/cache/**"]
@@ -9,13 +8,13 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
-    "pre-start": {
-      "dependsOn": ["^pre-start"]
-    },
     "dev": {
       "cache": false,
       "persistent": true,
       "dependsOn": ["web#pre-start"]
+    },
+    "pre-start": {
+      "dependsOn": ["^pre-start"]
     }
   }
 }

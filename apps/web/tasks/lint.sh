@@ -1,8 +1,16 @@
-#!/bin/sh
-set -e
-echo "🛠️  Checking code with ESLint..."
+#!/bin/sh -e
+
+completed() {
+  echo "\033[32m✓\033[0m $1 completed"
+}
+
+checking() {
+  echo "\033[33m⏳\033[0m Checking the code with $1..."
+}
+
+checking "ESLint"
 eslint .
-echo "\033[32m✓\033[0m ESLint completed"
-echo "🛠️  Checking code with TypeScript..."
+completed "ESLint"
+checking "TypeScript"
 tsc --noEmit --project tsconfig.json
-echo "\033[32m✓\033[0m TypeScript completed"
+completed "TypeScript"

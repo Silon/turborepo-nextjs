@@ -8,10 +8,10 @@
     "build": "pnpm next build",
     "analyze": "ANALYZE=true pnpm next build",
     "preview": "pnpm run build && pnpm run start",
-    "lint": "./tasks/lint.sh",
     "generate": "turbo gen --config ./turbo/generators/plopfile.ts",
     "postbuild": "pnpm run sitemap",
     "sitemap": "next-sitemap",
+    "lint": "./tasks/lint.sh",
     "pre-start": "./tasks/pre-start.sh"
   },
   "dependencies": {
