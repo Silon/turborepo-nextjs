@@ -1,0 +1,33 @@
+{
+  "name": "Node.js & TypeScript",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "postCreateCommand": "pnpm config set store-dir /home/node/.local/share/pnpm/store && pnpm install --frozen-lockfile",
+  "postAttachCommand": "pnpm dev",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Web App"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "adpyke.codesnap",
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker",
+        "lokalise.i18n-ally",
+        "YoavBls.pretty-ts-errors",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "wix.vscode-import-cost",
+        "mikestead.dotenv"
+      ]
+    }
+  }
+}
