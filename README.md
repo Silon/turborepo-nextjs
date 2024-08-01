@@ -4,6 +4,7 @@
 
 <p align="center">
     <strong>
+    Dev Container&nbsp;&nbsp;🪢&nbsp;&nbsp;
     TurboRepo&nbsp;&nbsp;🪢&nbsp;&nbsp;
     TypeScript&nbsp;&nbsp;🪢&nbsp;&nbsp;
     ESLint (Flat Config)&nbsp;&nbsp;🪢&nbsp;&nbsp;
