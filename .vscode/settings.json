@@ -22,14 +22,14 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   /* Disable JavaScript default validation to prevent linting duplicates */
   "javascript.validate.enable": false,
-  "typescript.validate.enable": false,
-  
+  // "typescript.validate.enable": false,
+
   /* Eslit */
-  "eslint.experimental.useFlatConfig": true, // VERY IMPORTANT!!!
+  "eslint.experimental.useFlatConfig": false, // VERY IMPORTANT!!!
 
   // Tailwind Variants
   "tailwindCSS.experimental.classRegex": [
@@ -44,5 +44,5 @@
     "tseslint",
     "turborepo",
     "Zustand"
-  ],
+  ]
 }
