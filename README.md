@@ -25,8 +25,8 @@
 ## Getting Started
 
 - Clone this repository or select "Use this template" on GitHub repository page
-- Use `pnpm i` to install dependencies
-- Use `pnpm prepare` to install husky hooks
+- Open the project in VSCode
+- Click on the bottom left corner and select "Reopen in Container" or use the command (Cmd+Shift+P) `Remote-Containers: Reopen in Container`
 
 ## Commands
 
