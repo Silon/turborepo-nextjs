@@ -8,20 +8,19 @@
     "./UiFormTextInput": "./src/UiFormTextInput.tsx"
   },
   "scripts": {
-    "lint": "eslint .",
-    "generate:component": "turbo gen react-component"
+    "lint": "eslint ."
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@turbo/gen": "^1.12.4",
-    "@types/node": "^20.11.24",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "tailwind-variants": "^0.2.1",
-    "typescript": "^5.4.3"
+    "@turbo/gen": "1.12.4",
+    "@types/node": "20.11.24",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "tailwind-variants": "0.2.1",
+    "typescript": "5.5.4"
   }
 }

@@ -4,9 +4,9 @@ import componentGenerator from "./component.generator";
 import contextGenerator from "./context.generator";
 import pageLayoutGenerator from "./page-layout.generator";
 
-module.exports = function Plopfile(plop: PlopTypes.NodePlopAPI): void {
+export default function generator(plop: PlopTypes.NodePlopAPI): void {
   componentGenerator(plop);
   pageLayoutGenerator(plop);
   airContextGenerator(plop);
   contextGenerator(plop);
-};
+}

@@ -1,31 +1,3 @@
-## Scripts
-
-```sh
-# Start developing
-dev
-
-# Lint code with ESLint
-lint
-
-# Preview app (build and start)
-preview
-
-# Analyze bundle size
-analyze
-
-# Build production app
-build
-
-# Start production app
-start
-
-# Create new component or context
-generate
-
-# Create sitemap
-sitemap
-```
-
 ## App Structure
 
 ```sh

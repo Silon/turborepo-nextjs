@@ -32,25 +32,34 @@
 
 ```sh
 # Building apps
-build
+pnpm build
 
 # Start development
-dev
+pnpm dev
 
 # Lint code with ESLint
-lint
+pnpm lint
+
+# Preview
+pnpm preview
 
 # Install husky hooks
-prepare
+pnpm prepare
 
 # Format code with Prettier
-format
+pnpm format
 
 # Commit with Commitizen (pretty git commit)
-commit
+pnpm commit
 
 # Inspect ESLint configuration
-inspect-eslint
+pnpm eslint-config-inspector
+
+# Analyze bundle
+pnpm analyze
+
+# Generate components, pages, contexts...
+pnpm generate
 ```
 
 ## Conventional Commits
