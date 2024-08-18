@@ -11,6 +11,7 @@
   },
   "postCreateCommand": "pnpm config set store-dir /home/node/.local/share/pnpm/store && pnpm install --frozen-lockfile",
   "postAttachCommand": "pnpm dev",
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "forwardPorts": [3000],
   "portsAttributes": {
     "3000": {
