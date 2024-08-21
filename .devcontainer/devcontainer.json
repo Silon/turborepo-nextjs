@@ -30,7 +30,8 @@
         "bradlc.vscode-tailwindcss",
         "esbenp.prettier-vscode",
         "wix.vscode-import-cost",
-        "mikestead.dotenv"
+        "mikestead.dotenv",
+        "antfu.pnpm-catalog-lens"
       ]
     }
   }

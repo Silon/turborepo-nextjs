@@ -6,7 +6,7 @@
     "base.js"
   ],
   "devDependencies": {
-    "tailwind-variants": "0.2.1",
-    "tailwindcss": "3.4.10"
+    "tailwind-variants": "catalog:",
+    "tailwindcss": "catalog:"
   }
 }

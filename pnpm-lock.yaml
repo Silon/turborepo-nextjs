@@ -4,18 +4,120 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@commitlint/cli':
+      specifier: 19.3.0
+      version: 19.3.0
+    '@commitlint/config-conventional':
+      specifier: 19.2.2
+      version: 19.2.2
+    '@commitlint/cz-commitlint':
+      specifier: 19.2.0
+      version: 19.2.0
+    '@next/bundle-analyzer':
+      specifier: 14.2.4
+      version: 14.2.4
+    '@svgr/webpack':
+      specifier: 8.1.0
+      version: 8.1.0
+    '@turbo/gen':
+      specifier: 1.12.4
+      version: 1.12.4
+    '@types/node':
+      specifier: 20.11.24
+      version: 20.11.24
+    '@types/react':
+      specifier: 18.3.3
+      version: 18.3.3
+    '@types/react-dom':
+      specifier: 18.3.0
+      version: 18.3.0
+    autoprefixer:
+      specifier: 10.4.19
+      version: 10.4.19
+    commitizen:
+      specifier: 4.3.0
+      version: 4.3.0
+    dotenv:
+      specifier: 16.4.5
+      version: 16.4.5
+    eslint:
+      specifier: 8.57.0
+      version: 8.57.0
+    eslint-config-neon:
+      specifier: 0.1.62
+      version: 0.1.62
+    framer-motion:
+      specifier: 11.3.2
+      version: 11.3.2
+    globals:
+      specifier: 15.0.0
+      version: 15.0.0
+    husky:
+      specifier: 9.0.11
+      version: 9.0.11
+    inquirer:
+      specifier: 9.2.16
+      version: 9.2.16
+    lint-staged:
+      specifier: 15.2.2
+      version: 15.2.2
+    lodash.merge:
+      specifier: 4.6.2
+      version: 4.6.2
+    next:
+      specifier: 14.2.5
+      version: 14.2.5
+    next-intl:
+      specifier: 3.17.1
+      version: 3.17.1
+    next-sitemap:
+      specifier: 4.2.3
+      version: 4.2.3
+    postcss:
+      specifier: 8.4.38
+      version: 8.4.38
+    prettier:
+      specifier: 3.3.3
+      version: 3.3.3
+    prettier-plugin-tailwindcss:
+      specifier: 0.6.5
+      version: 0.6.5
+    react:
+      specifier: 18.3.1
+      version: 18.3.1
+    react-dom:
+      specifier: 18.3.1
+      version: 18.3.1
+    tailwind-variants:
+      specifier: 0.2.1
+      version: 0.2.1
+    tailwindcss:
+      specifier: 3.4.10
+      version: 3.4.10
+    turbo:
+      specifier: 2.0.14
+      version: 2.0.14
+    typescript:
+      specifier: 5.5.4
+      version: 5.5.4
+    typescript-eslint:
+      specifier: 7.16.1
+      version: 7.16.1
+
 importers:
 
   .:
     devDependencies:
       '@commitlint/cli':
-        specifier: 19.3.0
+        specifier: 'catalog:'
         version: 19.3.0(@types/node@20.11.24)(typescript@5.5.4)
       '@commitlint/config-conventional':
-        specifier: 19.2.2
+        specifier: 'catalog:'
         version: 19.2.2
       '@commitlint/cz-commitlint':
-        specifier: 19.2.0
+        specifier: 'catalog:'
         version: 19.2.0(@types/node@20.11.24)(commitizen@4.3.0(@types/node@20.11.24)(typescript@5.5.4))(inquirer@9.2.16)(typescript@5.5.4)
       '@repo/eslint-config':
         specifier: workspace:*
@@ -27,31 +129,31 @@ importers:
         specifier: workspace:*
         version: link:config/typescript-config
       commitizen:
-        specifier: 4.3.0
+        specifier: 'catalog:'
         version: 4.3.0(@types/node@20.11.24)(typescript@5.5.4)
       eslint:
-        specifier: 8.57.0
+        specifier: 'catalog:'
         version: 8.57.0
       husky:
-        specifier: 9.0.11
+        specifier: 'catalog:'
         version: 9.0.11
       inquirer:
-        specifier: 9.2.16
+        specifier: 'catalog:'
         version: 9.2.16
       lint-staged:
-        specifier: 15.2.2
+        specifier: 'catalog:'
         version: 15.2.2
       prettier:
-        specifier: 3.3.3
+        specifier: 'catalog:'
         version: 3.3.3
       prettier-plugin-tailwindcss:
-        specifier: 0.6.5
+        specifier: 'catalog:'
         version: 0.6.5(prettier@3.3.3)
       turbo:
-        specifier: 2.0.14
+        specifier: 'catalog:'
         version: 2.0.14
       typescript:
-        specifier: 5.5.4
+        specifier: 'catalog:'
         version: 5.5.4
 
   apps/web:
@@ -60,26 +162,26 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       framer-motion:
-        specifier: 11.3.2
+        specifier: 'catalog:'
         version: 11.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next:
-        specifier: 14.2.5
+        specifier: 'catalog:'
         version: 14.2.5(@babel/core@7.23.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-intl:
-        specifier: 3.17.1
+        specifier: 'catalog:'
         version: 3.17.1(next@14.2.5(@babel/core@7.23.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       next-sitemap:
-        specifier: 4.2.3
+        specifier: 'catalog:'
         version: 4.2.3(next@14.2.5(@babel/core@7.23.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       react:
-        specifier: 18.3.1
+        specifier: 'catalog:'
         version: 18.3.1
       react-dom:
-        specifier: 18.3.1
+        specifier: 'catalog:'
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@next/bundle-analyzer':
-        specifier: 14.2.4
+        specifier: 'catalog:'
         version: 14.2.4
       '@repo/tailwind-config':
         specifier: workspace:*
@@ -88,64 +190,64 @@ importers:
         specifier: workspace:*
         version: link:../../config/typescript-config
       '@svgr/webpack':
-        specifier: 8.1.0
+        specifier: 'catalog:'
         version: 8.1.0(typescript@5.5.4)
       '@turbo/gen':
-        specifier: 1.12.4
+        specifier: 'catalog:'
         version: 1.12.4(@types/node@20.11.24)(typescript@5.5.4)
       '@types/node':
-        specifier: 20.11.24
+        specifier: 'catalog:'
         version: 20.11.24
       '@types/react':
-        specifier: 18.3.3
+        specifier: 'catalog:'
         version: 18.3.3
       '@types/react-dom':
-        specifier: 18.3.0
+        specifier: 'catalog:'
         version: 18.3.0
       autoprefixer:
-        specifier: 10.4.19
+        specifier: 'catalog:'
         version: 10.4.19(postcss@8.4.38)
       dotenv:
-        specifier: 16.4.5
+        specifier: 'catalog:'
         version: 16.4.5
       postcss:
-        specifier: 8.4.38
+        specifier: 'catalog:'
         version: 8.4.38
       tailwind-variants:
-        specifier: 0.2.1
+        specifier: 'catalog:'
         version: 0.2.1(tailwindcss@3.4.10(ts-node@10.9.1(@types/node@20.11.24)(typescript@5.5.4)))
       tailwindcss:
-        specifier: 3.4.10
+        specifier: 'catalog:'
         version: 3.4.10(ts-node@10.9.1(@types/node@20.11.24)(typescript@5.5.4))
       typescript:
-        specifier: 5.5.4
+        specifier: 'catalog:'
         version: 5.5.4
 
   config/eslint-config:
     devDependencies:
       eslint-config-neon:
-        specifier: 0.1.62
+        specifier: 'catalog:'
         version: 0.1.62(eslint@8.57.0)(svelte@3.59.2)(typescript@5.5.4)
       globals:
-        specifier: 15.0.0
+        specifier: 'catalog:'
         version: 15.0.0
       lodash.merge:
-        specifier: 4.6.2
+        specifier: 'catalog:'
         version: 4.6.2
       typescript:
-        specifier: 5.5.4
+        specifier: 'catalog:'
         version: 5.5.4
       typescript-eslint:
-        specifier: 7.16.1
+        specifier: 'catalog:'
         version: 7.16.1(eslint@8.57.0)(typescript@5.5.4)
 
   config/tailwind-config:
     devDependencies:
       tailwind-variants:
-        specifier: 0.2.1
+        specifier: 'catalog:'
         version: 0.2.1(tailwindcss@3.4.10(ts-node@10.9.1(@types/node@20.11.24)(typescript@5.5.4)))
       tailwindcss:
-        specifier: 3.4.10
+        specifier: 'catalog:'
         version: 3.4.10(ts-node@10.9.1(@types/node@20.11.24)(typescript@5.5.4))
 
   config/typescript-config: {}
@@ -163,22 +265,22 @@ importers:
         specifier: workspace:*
         version: link:../../config/typescript-config
       '@turbo/gen':
-        specifier: 1.12.4
+        specifier: 'catalog:'
         version: 1.12.4(@types/node@20.11.24)(typescript@5.5.4)
       '@types/node':
-        specifier: 20.11.24
+        specifier: 'catalog:'
         version: 20.11.24
       '@types/react':
-        specifier: 18.3.3
+        specifier: 'catalog:'
         version: 18.3.3
       '@types/react-dom':
-        specifier: 18.3.0
+        specifier: 'catalog:'
         version: 18.3.0
       tailwind-variants:
-        specifier: 0.2.1
+        specifier: 'catalog:'
         version: 0.2.1(tailwindcss@3.4.10(ts-node@10.9.1(@types/node@20.11.24)(typescript@5.5.4)))
       typescript:
-        specifier: 5.5.4
+        specifier: 'catalog:'
         version: 5.5.4
 
 packages:
