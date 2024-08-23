@@ -1,6 +1,6 @@
-import type { {{pascalCase name}}Action, {{pascalCase name}}State } from "./{{pascalCase name}}.types";
+import type { ArGlobalStoreAction, ArGlobalStoreState } from "./ArGlobalStore.types";
 
-export function {{camelCase name}}Reducer(state: {{pascalCase name}}State, action: {{pascalCase name}}Action) {
+export function arGlobalStoreReducer(state: ArGlobalStoreState, action: ArGlobalStoreAction) {
   switch (action.type) {
     case "increment":
       return { count: state.count + 1 };

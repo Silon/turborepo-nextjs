@@ -1,5 +1,8 @@
-// i18n helpers
-//  https://github.com/infinitered/ignite/blob/master/boilerplate/app/i18n/i18n.ts
+/**
+ *  i18n helpers
+ *
+ *  @see https://github.com/infinitered/ignite/blob/master/boilerplate/app/i18n/i18n.ts
+ */
 export type RecursiveKeyOf<TObj extends object> = {
   [TKey in keyof TObj & (number | string)]: RecursiveKeyOfHandleValue<
     TObj[TKey],
@@ -23,8 +26,9 @@ type RecursiveKeyOfHandleValue<
     ? Text | `${Text}${RecursiveKeyOfInner<TValue>}`
     : Text;
 
-// Internal types
-
+/**
+ *   Ar Context Types
+ */
 export type ArContextAction<T> = {
   type: T;
 };

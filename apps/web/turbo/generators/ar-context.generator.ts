@@ -18,10 +18,12 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
     actions: (data) => {
       let path = "";
 
+      console.log({ __dirname });
+
       if (data?.module) {
-        path = `../../../src/modules/${data.module}/state`;
+        path = `${__dirname}/../../src/modules/${data.module}/lib/store`;
       } else {
-        path = `../../../src/state`;
+        path = `${__dirname}/../../src/lib/store`;
       }
 
       return [
@@ -32,22 +34,22 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         },
         {
           type: "add",
-          path: `${path}/{{pascalCase name}}/types.tsx`,
+          path: `${path}/{{pascalCase name}}/{{pascalCase name}}.types.tsx`,
           templateFile: "./ar-context/types.ts.hbs",
         },
         {
           type: "add",
-          path: `${path}/{{pascalCase name}}/context.tsx`,
+          path: `${path}/{{pascalCase name}}/{{pascalCase name}}.context.tsx`,
           templateFile: "./ar-context/context.tsx.hbs",
         },
         {
           type: "add",
-          path: `${path}/{{pascalCase name}}/reducer.tsx`,
+          path: `${path}/{{pascalCase name}}/{{pascalCase name}}.reducer.tsx`,
           templateFile: "./ar-context/reducer.tsx.hbs",
         },
         {
           type: "add",
-          path: `${path}/{{pascalCase name}}/hooks.tsx`,
+          path: `${path}/{{pascalCase name}}/{{pascalCase name}}.hooks.tsx`,
           templateFile: "./ar-context/hooks.tsx.hbs",
         },
       ];

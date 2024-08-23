@@ -1,54 +1,25 @@
 import { createContext, useMemo, useReducer } from "react";
-import { {{camelCase name}}StateReducer } from "./reducer";
-import type { {{pascalCase name}}StateActionsType, {{pascalCase name}}StateType } from "./types";
+import { {{camelCase name}}Reducer } from "./{{pascalCase name}}.reducer";
+import type { {{pascalCase name}}Actions, {{pascalCase name}}State } from "./{{pascalCase name}}.types";
 
-/**
- *
- * Separated into two contexts to avoid unnecessary re-renders
- * when only one of the contexts changes.
- *
- * See: https://kentcdodds.com/blog/how-to-optimize-your-context-value
- */
-export const {{pascalCase name}}State = createContext<{{pascalCase name}}StateType>({} as {{pascalCase name}}StateType);
-export const {{pascalCase name}}StateActions = createContext<{{pascalCase name}}StateActionsType>({} as {{pascalCase name}}StateActionsType);
+export const {{pascalCase name}}StateContext = createContext<{{pascalCase name}}State>({} as {{pascalCase name}}State);
+export const {{pascalCase name}}ActionsContext = createContext<{{pascalCase name}}Actions>({} as {{pascalCase name}}Actions);
 
-/**
- * Initial state
- *
- * This is used to initialize the state of the context.
- */
 const INITIAL_STATE = {
   count: 0,
 };
 
-/**
- *
- * {{pascalCase name}}StateProvider
- *
- * This is the provider for the {{pascalCase name}}.
- */
-export function {{pascalCase name}}StateProvider({
+export function {{pascalCase name}}Provider({
   children,
   initialState = INITIAL_STATE,
 }: {
   readonly children: React.ReactNode;
-  readonly initialState?: {{pascalCase name}}StateType;
+  readonly initialState?: {{pascalCase name}}State;
 }) {
-  /**
-   * useReducer
-   *
-   * Context state reducer
-   */
-  const [state, dispatch] = useReducer({{camelCase name}}StateReducer, {
+  const [state, dispatch] = useReducer({{camelCase name}}Reducer, {
     ...initialState,
   });
 
-  /**
-   *
-   * customAction
-   *
-   * This is an example of a custom action.
-   */
   const customAction = async (payload: number) => {
     dispatch({ type: "set", payload });
     await new Promise((resolve) => {
@@ -57,14 +28,8 @@ export function {{pascalCase name}}StateProvider({
     dispatch({ type: "increment" });
   };
 
-  /**
-   *
-   * actionsValue
-   *
-   * This is the value of the actions context.
-   */
   const actionsValue = useMemo(
-    (): {{pascalCase name}}StateActionsType => ({
+    (): {{pascalCase name}}Actions => ({
       increment: () => dispatch({ type: "increment" }),
       set: (payload: number) => dispatch({ type: "set", payload }),
       customAction,
@@ -72,15 +37,9 @@ export function {{pascalCase name}}StateProvider({
     [],
   );
 
-  /**
-   *
-   * This is the value of the state context.
-   *
-   * See: https://kentcdodds.com/blog/how-to-optimize-your-context-value
-   */
   return (
-    <{{pascalCase name}}State.Provider value={state}>
-      <{{pascalCase name}}StateActions.Provider value={actionsValue}>{children}</{{pascalCase name}}StateActions.Provider>
-    </{{pascalCase name}}State.Provider>
+    <{{pascalCase name}}StateContext.Provider value={state}>
+      <{{pascalCase name}}ActionsContext.Provider value={actionsValue}>{children}</{{pascalCase name}}ActionsContext.Provider>
+    </{{pascalCase name}}StateContext.Provider>
   );
 }

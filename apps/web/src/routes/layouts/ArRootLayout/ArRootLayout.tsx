@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import React from "react";
-import { ArGlobalStateProvider } from "state/ArGlobalState";
+import { ArGlobalStoreProvider } from "lib/store/ArGlobalStore";
 
 type Props = {
   readonly children: React.ReactNode;
@@ -21,7 +21,7 @@ async function Providers({ children }: { readonly children: React.ReactNode }) {
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <ArGlobalStateProvider>{children}</ArGlobalStateProvider>
+      <ArGlobalStoreProvider>{children}</ArGlobalStoreProvider>
     </NextIntlClientProvider>
   );
 }

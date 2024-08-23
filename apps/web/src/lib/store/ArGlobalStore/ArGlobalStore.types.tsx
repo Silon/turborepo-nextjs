@@ -1,15 +1,15 @@
 import type { ArContextAction, ArContextActionWithPayload } from "types";
 
-export type ArGlobalStateType = {
+export type ArGlobalStoreState = {
   count: number;
 };
 
-export type ArGlobalStateActionsType = {
+export type ArGlobalStoreActions = {
   customAction(payload: number): void;
   increment(): void;
   set(count: number): void;
 };
 
-export type ArGlobalStateAction =
+export type ArGlobalStoreAction = 
   | ArContextAction<"increment">
   | ArContextActionWithPayload<"set", number>;
