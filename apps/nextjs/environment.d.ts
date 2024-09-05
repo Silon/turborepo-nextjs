@@ -1,4 +1,3 @@
-
 /* eslint-disable */  
 // This file was generated automatically by create-env-types-file.js script
 // Please do not modify it manually

@@ -15,7 +15,7 @@
   "forwardPorts": [3000],
   "portsAttributes": {
     "3000": {
-      "label": "Web App"
+      "label": "NextJS App"
     }
   },
   "customizations": {

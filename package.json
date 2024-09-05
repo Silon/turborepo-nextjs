@@ -13,7 +13,7 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "dev:web": "turbo dev --help",
+    "dev:nextjs": "turbo nextjs",
     "lint": "turbo lint --no-cache",
     "preview": "turbo preview",
     "generate": "turbo gen",
