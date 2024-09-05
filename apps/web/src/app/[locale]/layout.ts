@@ -1,1 +1,1 @@
-export { ArRootLayout as default, metadata } from "routes/layouts/ArRootLayout";
+export { ArRootLayout as default, metadata } from 'routes/layouts/ArRootLayout'

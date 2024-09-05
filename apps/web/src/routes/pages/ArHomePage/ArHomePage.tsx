@@ -1,22 +1,23 @@
-import { UiButton } from "@repo/ui/UiButton";
-import { UiFormTextInput } from "@repo/ui/UiFormTextInput";
-import { UiIcon } from "@repo/ui/UiIcon";
-import type { Metadata } from "next";
-import React from "react";
-import SvgIcon from "assets/svg/icon-info.svg";
-import { ArText } from "components/common/ArText";
+import { UiButton } from '@repo/ui/UiButton'
+import { UiFormTextInput } from '@repo/ui/UiFormTextInput'
+import { UiIcon } from '@repo/ui/UiIcon'
+import type { Metadata } from 'next'
+import React from 'react'
+import SvgIcon from 'assets/svg/icon-info.svg'
+import { ArText } from 'components/common/ArText'
 
 type Props = {
-  readonly children: React.ReactNode;
-};
+  readonly children: React.ReactNode
+}
 
 export const metadata: Metadata = {
-  title: "Ar Home Page",
-  description: "Ar Home Page Description",
-};
+  title: 'Ar Home Page',
+  description: 'Ar Home Page Description',
+}
 
 export function ArHomePage({ children }: Props) {
-  console.log("ArHomePage props:", { children });
+  console.log('ArHomePage props:', { children })
+
   return (
     <div className="container flex flex-col items-start gap-6 p-10">
       <div>
@@ -36,5 +37,5 @@ export function ArHomePage({ children }: Props) {
         <ArText tx="common.title" />
       </div>
     </div>
-  );
+  )
 }

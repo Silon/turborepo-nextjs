@@ -1,3 +1,12 @@
-import eslintConfig from "@repo/eslint-config/index.mjs";
+import antfu from '@antfu/eslint-config'
 
-export default [...eslintConfig];
+const ERROR = 2
+const WARN = 1
+
+export default antfu({
+  react: true,
+  rules: {
+    '@typescript-eslint/consistent-type-definitions': [ERROR, 'type'],
+    'no-console': WARN,
+  },
+})

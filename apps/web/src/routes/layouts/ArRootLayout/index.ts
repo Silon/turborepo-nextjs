@@ -1,1 +1,1 @@
-export * from "./ArRootLayout";
+export * from './ArRootLayout'

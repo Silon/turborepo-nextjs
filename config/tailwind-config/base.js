@@ -1,15 +1,13 @@
-/* eslint-disable */
-
-const { withTV } = require("tailwind-variants/transformer");
+const { withTV } = require('tailwind-variants/transformer')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = withTV({
   theme: {
     extend: {
       colors: {
-        "ar-primary": "#003844",
+        'ar-primary': '#003844',
       },
     },
   },
   plugins: [],
-});
+})

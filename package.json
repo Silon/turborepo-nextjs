@@ -1,10 +1,14 @@
 {
   "name": "nextjs-turborepo",
+  "version": "4.1.0",
   "private": true,
-  "version": "3.1.0",
+  "packageManager": "pnpm@9.7.1",
   "author": {
     "name": "Damian Nowakowski",
     "email": "silon.damian@gmail.com"
+  },
+  "engines": {
+    "node": "^20"
   },
   "scripts": {
     "build": "turbo build",
@@ -25,10 +29,10 @@
     }
   },
   "devDependencies": {
+    "@antfu/eslint-config": "catalog:",
     "@commitlint/cli": "catalog:",
     "@commitlint/config-conventional": "catalog:",
     "@commitlint/cz-commitlint": "catalog:",
-    "@repo/eslint-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "commitizen": "catalog:",
@@ -40,9 +44,5 @@
     "prettier-plugin-tailwindcss": "catalog:",
     "turbo": "catalog:",
     "typescript": "catalog:"
-  },
-  "packageManager": "pnpm@9.7.1",
-  "engines": {
-    "node": "^20"
   }
 }

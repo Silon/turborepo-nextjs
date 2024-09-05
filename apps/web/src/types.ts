@@ -8,14 +8,14 @@ export type RecursiveKeyOf<TObj extends object> = {
     TObj[TKey],
     `${TKey}`
   >;
-}[keyof TObj & (number | string)];
+}[keyof TObj & (number | string)]
 
 type RecursiveKeyOfInner<TObj extends object> = {
   [TKey in keyof TObj & (number | string)]: RecursiveKeyOfHandleValue<
     TObj[TKey],
     `.${TKey}` | `['${TKey}']`
   >;
-}[keyof TObj & (number | string)];
+}[keyof TObj & (number | string)]
 
 type RecursiveKeyOfHandleValue<
   TValue,
@@ -24,16 +24,16 @@ type RecursiveKeyOfHandleValue<
   ? Text
   : TValue extends object
     ? Text | `${Text}${RecursiveKeyOfInner<TValue>}`
-    : Text;
+    : Text
 
 /**
  *   Ar Context Types
  */
 export type ArContextAction<T> = {
-  type: T;
-};
+  type: T
+}
 
 export type ArContextActionWithPayload<T, P> = {
-  payload: P;
-  type: T;
-};
+  payload: P
+  type: T
+}
