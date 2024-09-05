@@ -10,16 +10,14 @@
   "scripts": {
     "lint": "eslint ."
   },
-  "peerDependencies": {
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
-  },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "@turbo/gen": "catalog:",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "tailwind-variants": "catalog:",
     "typescript": "catalog:"
   }
