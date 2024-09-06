@@ -4,17 +4,12 @@
   ],
 
   "cSpell.words": [
+    "Commitlint",
     "nextjs",
-    "postbuild",
-    "svgr",
-    "tailwindcss",
-    "tsdoc",
-    "tseslint",
+    "Nowakowski",
     "turborepo",
     "Zustand"
   ],
-
-  "eslint.debug": true,
 
   // Auto fix
   "editor.codeActionsOnSave": {
