@@ -14,7 +14,7 @@ const uiButton = tv({
   base: 'flex',
   variants: {
     theme: {
-      base: 'px-4 py-1 border border-gray-300 rounded-lg active:scale-95 transition-all',
+      base: 'rounded-lg border border-gray-300 px-4 py-1 transition-all active:scale-95',
       primary: 'bg-ar-primary',
     },
   },

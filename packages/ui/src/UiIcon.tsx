@@ -25,7 +25,7 @@ const uiIcon = tv({
   variants: {
     theme: {
       base: '',
-      primary: 'text-primary',
+      primary: 'text-ar-primary',
     },
   },
 })

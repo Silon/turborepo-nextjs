@@ -11,7 +11,7 @@ const uiFormTextInput = tv({
   base: 'flex',
   variants: {
     theme: {
-      base: 'px-1 py-1 border border-gray-300 rounded-lg',
+      base: 'rounded-lg border border-gray-300 p-1',
       primary: 'bg-ar-primary',
     },
   },

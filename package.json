@@ -37,6 +37,7 @@
     "@repo/typescript-config": "workspace:*",
     "commitizen": "catalog:",
     "eslint": "catalog:",
+    "eslint-plugin-tailwindcss": "catalog:",
     "husky": "catalog:",
     "inquirer": "catalog:",
     "lint-staged": "catalog:",

@@ -17,6 +17,7 @@ catalog:
   commitizen: 4.3.0
   dotenv: 16.4.5
   eslint: 9.9.1
+  eslint-plugin-tailwindcss: 3.17.4
   eslint-config-neon: 0.1.62
   framer-motion: 11.3.2
   globals: 15.0.0
