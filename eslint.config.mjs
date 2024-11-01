@@ -13,7 +13,6 @@ export default antfu(
       'no-console': WARN,
     },
   },
-  ...tailwind.configs['flat/recommended'],
   {
     files: ['packages/ui/**/*.{js,ts,jsx,tsx}'],
     settings: {
@@ -42,4 +41,5 @@ export default antfu(
       }],
     },
   },
+  ...tailwind.configs['flat/recommended'],
 )
