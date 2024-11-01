@@ -1,11 +1,11 @@
 'use client'
 
-import { createContext, useMemo, useReducer } from 'react'
-import { arGlobalStoreReducer } from './ArGlobalStore.reducer'
 import type {
   ArGlobalStoreActions,
   ArGlobalStoreState,
 } from './ArGlobalStore.types'
+import { createContext, useMemo, useReducer } from 'react'
+import { arGlobalStoreReducer } from './ArGlobalStore.reducer'
 
 export const ArGlobalStoreStateContext = createContext<ArGlobalStoreState>(
   {} as ArGlobalStoreState,

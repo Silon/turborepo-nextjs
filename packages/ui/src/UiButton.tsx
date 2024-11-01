@@ -1,5 +1,5 @@
-import { type ButtonHTMLAttributes, forwardRef } from 'react'
 import type { VariantProps } from 'tailwind-variants'
+import { type ButtonHTMLAttributes, forwardRef } from 'react'
 import { tv } from 'tailwind-variants'
 
 type UiButtonVariants = VariantProps<typeof uiButton>

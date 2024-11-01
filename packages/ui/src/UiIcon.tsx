@@ -1,5 +1,5 @@
-import { forwardRef } from 'react'
 import type { VariantProps } from 'tailwind-variants'
+import { forwardRef } from 'react'
 import { tv } from 'tailwind-variants'
 
 type BasicIconProps = {

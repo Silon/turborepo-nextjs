@@ -1,10 +1,10 @@
-import 'styles/globals.css'
-
 import type { Metadata } from 'next'
+
+import { ArGlobalStoreProvider } from 'lib/store/ArGlobalStore'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import React from 'react'
-import { ArGlobalStoreProvider } from 'lib/store/ArGlobalStore'
+import 'styles/globals.css'
 
 type Props = {
   readonly children: React.ReactNode

@@ -1,15 +1,10 @@
-import tailwind from 'eslint-plugin-tailwindcss'
 import antfu from '@antfu/eslint-config'
+import tailwind from 'eslint-plugin-tailwindcss'
 
 const ERROR = 2
 const WARN = 1
 
 export default antfu(
-/**
- *
- *  Base Config
- *
- */
   {
     react: true,
     typescript: true,
@@ -18,18 +13,7 @@ export default antfu(
       'no-console': WARN,
     },
   },
-  /**
-   *
-   * Tailwind Config
-   *
-   */
   ...tailwind.configs['flat/recommended'],
-  /**
-   *
-   * UI Components
-   * packages/ui
-   *
-   */
   {
     files: ['packages/ui/**/*.{js,ts,jsx,tsx}'],
     settings: {
@@ -44,12 +28,6 @@ export default antfu(
       }],
     },
   },
-  /**
-   *
-   * Next.js
-   * apps/nextjs
-   *
-   */
   {
     files: ['apps/nextjs/**/*.{js,ts,jsx,tsx}'],
     settings: {

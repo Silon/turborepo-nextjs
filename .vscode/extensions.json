@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "antfu.where-am-i",
+    "dbaeumer.vscode-eslint",
+    "usernamehw.errorlens",
+    "streetsidesoftware.code-spell-checker",
+    "eamodio.gitlens",
+    "znck.grammarly",
+    "adpyke.codesnap",
+    "ms-vscode-remote.remote-containers",
+    "ms-azuretools.vscode-docker",
+    "mikestead.dotenv",
+    "github.copilot-chat",
+    "github.github-vscode-theme",
+    "wix.vscode-import-cost",
+    "pkief.material-icon-theme",
+    "antfu.pnpm-catalog-lens",
+    "yoavbls.pretty-ts-errors",
+    "bradlc.vscode-tailwindcss"
+  ]
+}

@@ -1,5 +1,5 @@
-import { type InputHTMLAttributes, forwardRef } from 'react'
 import type { VariantProps } from 'tailwind-variants'
+import { forwardRef, type InputHTMLAttributes } from 'react'
 import { tv } from 'tailwind-variants'
 
 type UiFormTextInputVariants = VariantProps<typeof uiFormTextInput>

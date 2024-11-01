@@ -1,10 +1,10 @@
+import type { Metadata } from 'next'
 import { UiButton } from '@repo/ui/UiButton'
 import { UiFormTextInput } from '@repo/ui/UiFormTextInput'
 import { UiIcon } from '@repo/ui/UiIcon'
-import type { Metadata } from 'next'
-import React from 'react'
 import SvgIcon from 'assets/svg/icon-info.svg'
 import { ArText } from 'components/common/ArText'
+import React from 'react'
 
 type Props = {
   readonly children: React.ReactNode

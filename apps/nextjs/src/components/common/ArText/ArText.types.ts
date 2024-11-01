@@ -1,5 +1,5 @@
-import type { useTranslations } from 'next-intl'
 import type { TxKeyPath } from 'i18n'
+import type { useTranslations } from 'next-intl'
 
 export type ArTextProps = React.HTMLAttributes<HTMLElement> & {
   children?: React.ReactNode

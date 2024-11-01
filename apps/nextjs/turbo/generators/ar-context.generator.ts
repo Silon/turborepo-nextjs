@@ -1,5 +1,5 @@
-import path from 'node:path'
 import type { PlopTypes } from '@turbo/gen'
+import path from 'node:path'
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
   plop.setGenerator('ar-context', {

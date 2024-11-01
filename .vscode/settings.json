@@ -1,23 +1,49 @@
 {
-  "tailwindCSS.experimental.classRegex": [
-    ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ],
+  "search.exclude": {
+    "**/.git": true,
+    "**/.github": false,
+    "**/.next": true,
+    "**/.husky": true,
+    "**/.pnpm": true,
+    "**/.turbo": true,
+    "**/.vscode": true,
+    "**/dist/**": true,
+    "**/logs": true,
+    "**/node_modules": true,
+    "**/out/**": true,
+    "**/pnpm-lock.yaml": true
+  },
 
-  "cSpell.words": [
-    "Commitlint",
-    "nextjs",
-    "Nowakowski",
-    "turborepo",
-    "Zustand"
-  ],
-
-  // Auto fix
+  "workbench.tree.indent": 12,
+  "workbench.list.smoothScrolling": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.guides.bracketPairs": "active",
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.codeActionsOnSave": {
+    "source.fixAll": "never",
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
   },
 
-  // Silent the stylistic rules in you IDE, but still auto fix them
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontWeight": "300",
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.tabs.enabled": true,
+
+  // Copilot
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "plaintext": false
+  },
+
+  // Eslint
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.quiet": true,
   "eslint.rules.customizations": [
     { "rule": "style/*", "severity": "off", "fixable": true },
     { "rule": "format/*", "severity": "off", "fixable": true },
@@ -53,5 +79,18 @@
     "scss",
     "pcss",
     "postcss"
-  ]
+  ],
+
+  // I only use Prettier for manually formatting
+  "prettier.enable": false,
+  "prettier.printWidth": 200,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+
+  "tailwindCSS.experimental.classRegex": [
+    ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+
+  "cSpell.words": []
+
 }

@@ -1,7 +1,7 @@
-import { notFound } from 'next/navigation'
-import { getRequestConfig } from 'next-intl/server'
 import type { RecursiveKeyOf } from 'types'
 import type translation from '../messages/en.json'
+import { notFound } from 'next/navigation'
+import { getRequestConfig } from 'next-intl/server'
 
 // Can be imported from a shared config
 const locales = ['en']
