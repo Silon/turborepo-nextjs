@@ -2,7 +2,7 @@
   "name": "turborepo-nextjs",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
+    "ghcr.io/devcontainers/features/node:2": {
       "version": "20"
     },
     "ghcr.io/devcontainers/features/common-utils:2": {
